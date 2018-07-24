@@ -1,5 +1,5 @@
-# 1 "C:/VCNN/solution1/.autopilot/db/relu.pragma.1.cpp"
-# 1 "C:/VCNN/solution1/.autopilot/db/relu.pragma.1.cpp" 1
+# 1 "C:/Users/niles/Downloads/Uni/PartIV/Code/MainRepo/VCNN_Update/solution1/.autopilot/db/relu.pragma.1.cpp"
+# 1 "C:/Users/niles/Downloads/Uni/PartIV/Code/MainRepo/VCNN_Update/solution1/.autopilot/db/relu.pragma.1.cpp" 1
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 152 "<built-in>" 3
@@ -11,8 +11,8 @@
 
 
 
-# 1 "C:/Xilinx/Vivado/2018.1/common/technology/autopilot\\etc/autopilot_ssdm_op.h" 1
-# 157 "C:/Xilinx/Vivado/2018.1/common/technology/autopilot\\etc/autopilot_ssdm_op.h"
+# 1 "C:/Xilinx/Vivado/2018.2/common/technology/autopilot\\etc/autopilot_ssdm_op.h" 1
+# 157 "C:/Xilinx/Vivado/2018.2/common/technology/autopilot\\etc/autopilot_ssdm_op.h"
 extern "C" {
 
 
@@ -145,9 +145,9 @@ extern "C" {
 }
 # 9 "<command line>" 2
 # 1 "<built-in>" 2
-# 1 "C:/VCNN/solution1/.autopilot/db/relu.pragma.1.cpp" 2
-# 1 "VCNN/src/lib/layers/relu.cpp"
-# 1 "VCNN/src/lib/layers/relu.cpp" 1
+# 1 "C:/Users/niles/Downloads/Uni/PartIV/Code/MainRepo/VCNN_Update/solution1/.autopilot/db/relu.pragma.1.cpp" 2
+# 1 "VCNN_Update/src/lib/layers/relu.cpp"
+# 1 "VCNN_Update/src/lib/layers/relu.cpp" 1
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 152 "<built-in>" 3
@@ -159,8 +159,8 @@ extern "C" {
 
 
 
-# 1 "C:/Xilinx/Vivado/2018.1/common/technology/autopilot\\etc/autopilot_ssdm_op.h" 1
-# 157 "C:/Xilinx/Vivado/2018.1/common/technology/autopilot\\etc/autopilot_ssdm_op.h"
+# 1 "C:/Xilinx/Vivado/2018.2/common/technology/autopilot\\etc/autopilot_ssdm_op.h" 1
+# 157 "C:/Xilinx/Vivado/2018.2/common/technology/autopilot\\etc/autopilot_ssdm_op.h"
 extern "C" {
 
 
@@ -293,24 +293,24 @@ extern "C" {
 }
 # 9 "<command line>" 2
 # 1 "<built-in>" 2
-# 1 "VCNN/src/lib/layers/relu.cpp" 2
-# 19 "VCNN/src/lib/layers/relu.cpp"
-# 1 "VCNN/src/lib/layers/layers.h" 1
+# 1 "VCNN_Update/src/lib/layers/relu.cpp" 2
+# 19 "VCNN_Update/src/lib/layers/relu.cpp"
+# 1 "VCNN_Update/src/lib/layers/layers.h" 1
 
 
 
-# 1 "VCNN/src/lib/layers/../../custom/caffe_model_layer.h" 1
+# 1 "VCNN_Update/src/lib/layers/../../custom/caffe_model_layer.h" 1
 
 
 static int const nLayers = 9;
 static float const dataScale= 0.00390625;
 static int const nOutput = 10;
-typedef enum {CONVOLUTION,POOLING_AVG,POOLING_MAX,RELU,INNERPRODUCT,SOFTMAX,RETURN_CALLBACK} LayerType;
+typedef enum {CONVOLUTION,CONVOLUTION2,POOLING_MAX,RELU,INNERPRODUCT,INNERPRODUCT2,SOFTMAX,RETURN_CALLBACK} LayerType;
 
 typedef struct {
     int id;
     LayerType type;
-# 20 "VCNN/src/lib/layers/../../custom/caffe_model_layer.h"
+# 20 "VCNN_Update/src/lib/layers/../../custom/caffe_model_layer.h"
  int conv_filter_channels;
     int conv_filter_size;
     int conv_filter_num;
@@ -325,7 +325,6 @@ typedef struct {
     int ip_channel_num;
     int ip_output_num;
 
-
     int input_channel_num;
     int input_feature_map_height;
     int input_feature_map_width;
@@ -333,70 +332,55 @@ typedef struct {
     float* input_data;
 } Layer;
 
-
-
-
-
-
-typedef struct {
-
-  int id;
-
-  float *conv_filter_weight;
-  float *conv_bias;
-
-
-  float *ip_weight;
-  float *ip_bias;
-
-} LayerWeight;
-
-
 static int const nChannels = 1;
 static int const imgWidth = 28;
 static int const imgHeight = 28;
-static int const nLayerTypes = 7;
+static int const nLayerTypes = 8;
 extern float mean_image[1][28][28];
 
 
 
 
-extern LayerWeight layers_weight[9];
 extern Layer layers[10];
-# 5 "VCNN/src/lib/layers/layers.h" 2
+# 4 "VCNN_Update/src/lib/layers/layers.h" 2
+
 
 using namespace std;
 
 
 
-typedef void (*Layer_f) (Layer current, LayerWeight cw, Layer next);
+typedef void (*Layer_f) (Layer current, Layer next);
 
 
 
-void Convolution(Layer current, LayerWeight cw, Layer next);
-void PoolingAvg(Layer current, LayerWeight cw, Layer next);
-void PoolingMax(Layer current, LayerWeight cw, Layer next);
-void Relu(Layer current, LayerWeight cw, Layer next);
-void InnerProduct(Layer current, LayerWeight cw, Layer next);
-void Softmax(Layer current, LayerWeight cw, Layer next);
-void ReturnCallback(Layer current, LayerWeight cw, Layer next);
+void Convolution(Layer current, Layer next);
+void Convolution2(Layer current, Layer next);
+void PoolingMax(Layer current, Layer next);
+void Relu(Layer current, Layer next);
+void InnerProduct(Layer current, Layer next);
+void InnerProduct2(Layer current, Layer next);
+void Softmax(Layer current, Layer next);
+void ReturnCallback(Layer current, Layer next);
 
 
 
 static Layer_f layer_dict[nLayerTypes] = {
   Convolution,
-  PoolingAvg,
+  Convolution2,
   PoolingMax,
   Relu,
   InnerProduct,
+  InnerProduct2,
   Softmax,
   ReturnCallback
 };
-# 20 "VCNN/src/lib/layers/relu.cpp" 2
-# 1 "VCNN/src/lib/layers/../util.h" 1
-# 21 "VCNN/src/lib/layers/relu.cpp" 2
+# 19 "VCNN_Update/src/lib/layers/relu.cpp" 2
 
-void Relu(Layer current, LayerWeight cw, Layer next) {
+# 1 "VCNN_Update/src/lib/layers/../util.h" 1
+# 20 "VCNN_Update/src/lib/layers/relu.cpp" 2
+
+
+void Relu(Layer current, Layer next) {
 
  int inputs = current.input_channel_num;
  int height = current.input_feature_map_height;
@@ -415,17 +399,3 @@ void Relu(Layer current, LayerWeight cw, Layer next) {
   }
  }
 }
-
-class ssdm_global_array_relupp0cppaplinecpp {
- public:
-   inline __attribute__((always_inline)) ssdm_global_array_relupp0cppaplinecpp() {
-   _ssdm_SpecConstant(&nLayers);
-   _ssdm_SpecConstant(&dataScale);
-   _ssdm_SpecConstant(&nOutput);
-   _ssdm_SpecConstant(&nChannels);
-   _ssdm_SpecConstant(&imgWidth);
-   _ssdm_SpecConstant(&imgHeight);
-   _ssdm_SpecConstant(&nLayerTypes);
-  }
-};
-static ssdm_global_array_relupp0cppaplinecpp ssdm_global_array_ins;

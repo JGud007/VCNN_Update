@@ -1,9 +1,9 @@
-#1 "VCNN/src/lib/layers/Softmax.cpp"
-#1 "VCNN/src/lib/layers/Softmax.cpp" 1
-#1 "<built-in>" 1
-#1 "<built-in>" 3
-#152 "<built-in>" 3
-#1 "<command line>" 1
+# 1 "VCNN_Update/src/lib/layers/Softmax.cpp"
+# 1 "VCNN_Update/src/lib/layers/Softmax.cpp" 1
+# 1 "<built-in>" 1
+# 1 "<built-in>" 3
+# 152 "<built-in>" 3
+# 1 "<command line>" 1
 
 
 
@@ -11,8 +11,8 @@
 
 
 
-#1 "C:/Xilinx/Vivado/2018.1/common/technology/autopilot\\etc/autopilot_ssdm_op.h" 1
-#157 "C:/Xilinx/Vivado/2018.1/common/technology/autopilot\\etc/autopilot_ssdm_op.h"
+# 1 "C:/Xilinx/Vivado/2018.2/common/technology/autopilot\\etc/autopilot_ssdm_op.h" 1
+# 157 "C:/Xilinx/Vivado/2018.2/common/technology/autopilot\\etc/autopilot_ssdm_op.h"
 extern "C" {
 
 
@@ -143,25 +143,25 @@ extern "C" {
 
 
 }
-#9 "<command line>" 2
-#1 "<built-in>" 2
-#1 "VCNN/src/lib/layers/Softmax.cpp" 2
-#1 "VCNN/src/lib/layers/layers.h" 1
+# 9 "<command line>" 2
+# 1 "<built-in>" 2
+# 1 "VCNN_Update/src/lib/layers/Softmax.cpp" 2
+# 1 "VCNN_Update/src/lib/layers/layers.h" 1
 
 
 
-#1 "VCNN/src/lib/layers/../../custom/caffe_model_layer.h" 1
+# 1 "VCNN_Update/src/lib/layers/../../custom/caffe_model_layer.h" 1
 
 
 static int const nLayers = 9;
 static float const dataScale= 0.00390625;
 static int const nOutput = 10;
-typedef enum {CONVOLUTION,POOLING_AVG,POOLING_MAX,RELU,INNERPRODUCT,SOFTMAX,RETURN_CALLBACK} LayerType;
+typedef enum {CONVOLUTION,CONVOLUTION2,POOLING_MAX,RELU,INNERPRODUCT,INNERPRODUCT2,SOFTMAX,RETURN_CALLBACK} LayerType;
 
 typedef struct {
     int id;
     LayerType type;
-#20 "VCNN/src/lib/layers/../../custom/caffe_model_layer.h"
+# 20 "VCNN_Update/src/lib/layers/../../custom/caffe_model_layer.h"
     int conv_filter_channels;
     int conv_filter_size;
     int conv_filter_num;
@@ -176,7 +176,6 @@ typedef struct {
     int ip_channel_num;
     int ip_output_num;
 
-
     int input_channel_num;
     int input_feature_map_height;
     int input_feature_map_width;
@@ -184,89 +183,73 @@ typedef struct {
     float* input_data;
 } Layer;
 
-
-
-
-
-
-typedef struct {
-
-  int id;
-
-  float *conv_filter_weight;
-  float *conv_bias;
-
-
-  float *ip_weight;
-  float *ip_bias;
-
-} LayerWeight;
-
-
 static int const nChannels = 1;
 static int const imgWidth = 28;
 static int const imgHeight = 28;
-static int const nLayerTypes = 7;
+static int const nLayerTypes = 8;
 extern float mean_image[1][28][28];
 
 
 
 
-extern LayerWeight layers_weight[9];
 extern Layer layers[10];
-#5 "VCNN/src/lib/layers/layers.h" 2
+# 4 "VCNN_Update/src/lib/layers/layers.h" 2
+
 
 using namespace std;
 
 
 
-typedef void (*Layer_f) (Layer current, LayerWeight cw, Layer next);
+typedef void (*Layer_f) (Layer current, Layer next);
 
 
 
-void Convolution(Layer current, LayerWeight cw, Layer next);
-void PoolingAvg(Layer current, LayerWeight cw, Layer next);
-void PoolingMax(Layer current, LayerWeight cw, Layer next);
-void Relu(Layer current, LayerWeight cw, Layer next);
-void InnerProduct(Layer current, LayerWeight cw, Layer next);
-void Softmax(Layer current, LayerWeight cw, Layer next);
-void ReturnCallback(Layer current, LayerWeight cw, Layer next);
+void Convolution(Layer current, Layer next);
+void Convolution2(Layer current, Layer next);
+void PoolingMax(Layer current, Layer next);
+void Relu(Layer current, Layer next);
+void InnerProduct(Layer current, Layer next);
+void InnerProduct2(Layer current, Layer next);
+void Softmax(Layer current, Layer next);
+void ReturnCallback(Layer current, Layer next);
 
 
 
 static Layer_f layer_dict[nLayerTypes] = {
   Convolution,
-  PoolingAvg,
+  Convolution2,
   PoolingMax,
   Relu,
   InnerProduct,
+  InnerProduct2,
   Softmax,
   ReturnCallback
 };
-#2 "VCNN/src/lib/layers/Softmax.cpp" 2
-#1 "VCNN/src/lib/layers/../util.h" 1
-#3 "VCNN/src/lib/layers/Softmax.cpp" 2
-extern "C" {
-#1 "C:/Xilinx/Vivado/2018.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 1 3
-#10 "C:/Xilinx/Vivado/2018.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 3
-#10 "C:/Xilinx/Vivado/2018.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 3
+# 1 "VCNN_Update/src/lib/layers/Softmax.cpp" 2
+
+# 1 "VCNN_Update/src/lib/layers/../util.h" 1
+# 2 "VCNN_Update/src/lib/layers/Softmax.cpp" 2
+
+# 1 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 1 3
+# 10 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 3
+# 10 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 3
 
 
-#1 "C:/Xilinx/Vivado/2018.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 1 3
-#10 "C:/Xilinx/Vivado/2018.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
-#1 "C:/Xilinx/Vivado/2018.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include/_mingw_mac.h" 1 3
-#10 "C:/Xilinx/Vivado/2018.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 2 3
-#277 "C:/Xilinx/Vivado/2018.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
-#1 "C:/Xilinx/Vivado/2018.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\vadefs.h" 1 3
-#13 "C:/Xilinx/Vivado/2018.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\vadefs.h" 3
-#1 "C:/Xilinx/Vivado/2018.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 1 3
-#674 "C:/Xilinx/Vivado/2018.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
-#1 "C:/Xilinx/Vivado/2018.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include/sdks/_mingw_directx.h" 1 3
-#674 "C:/Xilinx/Vivado/2018.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 2 3
+# 1 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 1 3
+# 10 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
+# 1 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include/_mingw_mac.h" 1 3
+# 10 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 2 3
+# 277 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
+# 1 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\vadefs.h" 1 3
+# 13 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\vadefs.h" 3
+# 1 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 1 3
+# 674 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
+# 1 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include/sdks/_mingw_directx.h" 1 3
+# 674 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 2 3
 
-#1 "C:/Xilinx/Vivado/2018.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include/sdks/_mingw_ddk.h" 1 3
-#675 "C:/Xilinx/Vivado/2018.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 2 3
-#13 "C:/Xilinx/Vivado/2018.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\vadefs.h" 2 3
+# 1 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include/sdks/_mingw_ddk.h" 1 3
+# 675 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 2 3
+# 13 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\vadefs.h" 2 3
 
 
 #pragma pack(push,_CRT_PACKING)
@@ -286,29 +269,29 @@ extern "C" {
 
 
   typedef __gnuc_va_list va_list;
-#99 "C:/Xilinx/Vivado/2018.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\vadefs.h" 3
+# 99 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\vadefs.h" 3
 }
 
 
 #pragma pack(pop)
-#277 "C:/Xilinx/Vivado/2018.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 2 3
+# 277 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 2 3
 
 
 #pragma pack(push,_CRT_PACKING)
-#370 "C:/Xilinx/Vivado/2018.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
+# 370 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
 __extension__ typedef unsigned long long size_t;
-#380 "C:/Xilinx/Vivado/2018.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
+# 380 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
 __extension__ typedef long long ssize_t;
-#392 "C:/Xilinx/Vivado/2018.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
+# 392 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
 __extension__ typedef long long intptr_t;
-#405 "C:/Xilinx/Vivado/2018.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
+# 405 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
 __extension__ typedef unsigned long long uintptr_t;
-#418 "C:/Xilinx/Vivado/2018.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
+# 418 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
 __extension__ typedef long long ptrdiff_t;
-#436 "C:/Xilinx/Vivado/2018.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
+# 436 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
 typedef unsigned short wint_t;
 typedef unsigned short wctype_t;
-#456 "C:/Xilinx/Vivado/2018.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
+# 456 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
 typedef int errno_t;
 
 
@@ -328,7 +311,7 @@ __extension__ typedef long long __time64_t;
 
 
 typedef __time64_t time_t;
-#607 "C:/Xilinx/Vivado/2018.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
+# 607 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
 struct threadlocaleinfostruct;
 struct threadmbcinfostruct;
 typedef struct threadlocaleinfostruct *pthreadlocinfo;
@@ -390,19 +373,19 @@ const char *__mingw_get_crt_info (void);
 
 
 #pragma pack(pop)
-#12 "C:/Xilinx/Vivado/2018.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 2 3
+# 12 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 2 3
 
 
 struct _exception;
 
 #pragma pack(push,_CRT_PACKING)
-#75 "C:/Xilinx/Vivado/2018.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 3
+# 75 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 3
 extern "C" {
 
 
 
   extern double * __imp__HUGE;
-#91 "C:/Xilinx/Vivado/2018.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 3
+# 91 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 3
   struct _exception {
     int type;
     const char *name;
@@ -436,7 +419,7 @@ extern "C" {
   double ceil(double _X);
   double floor(double _X);
   double fabs(double _X);
-#135 "C:/Xilinx/Vivado/2018.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 3
+# 135 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 3
   double ldexp(double _X,int _Y);
   double frexp(double _X,int *_Y);
   double modf(double _X,double *_Y);
@@ -455,7 +438,7 @@ extern "C" {
 
   double atof(const char *_String);
   double _atof_l(const char *_String,_locale_t _Locale);
-#162 "C:/Xilinx/Vivado/2018.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 3
+# 162 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 3
   struct _complex {
     double x;
     double y;
@@ -473,7 +456,7 @@ extern "C" {
 
 
   __attribute__ ((__dllimport__)) int _matherr (struct _exception *);
-#189 "C:/Xilinx/Vivado/2018.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 3
+# 189 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 3
   __attribute__ ((__dllimport__)) double _chgsign (double _X);
   __attribute__ ((__dllimport__)) double _copysign (double _Number,double _Sign);
   __attribute__ ((__dllimport__)) double _logb (double);
@@ -496,25 +479,25 @@ __attribute__ ((__dllimport__)) double y1 (double) ;
 __attribute__ ((__dllimport__)) double yn (int, double) ;
 
 __attribute__ ((__dllimport__)) double chgsign (double);
-#219 "C:/Xilinx/Vivado/2018.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 3
+# 219 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 3
   __attribute__ ((__dllimport__)) int finite (double);
   __attribute__ ((__dllimport__)) int fpclass (double);
-#264 "C:/Xilinx/Vivado/2018.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 3
+# 264 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 3
 typedef float float_t;
 typedef double double_t;
-#299 "C:/Xilinx/Vivado/2018.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 3
+# 299 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 3
   extern int __fpclassifyl (long double);
   extern int __fpclassifyf (float);
   extern int __fpclassify (double);
-#335 "C:/Xilinx/Vivado/2018.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 3
+# 335 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 3
   extern int __isnan (double);
   extern int __isnanf (float);
   extern int __isnanl (long double);
-#376 "C:/Xilinx/Vivado/2018.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 3
+# 376 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 3
   extern int __signbit (double);
   extern int __signbitf (float);
   extern int __signbitl (long double);
-#404 "C:/Xilinx/Vivado/2018.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 3
+# 404 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 3
   extern float sinf(float _X);
   extern long double sinl(long double);
 
@@ -632,7 +615,7 @@ typedef double double_t;
   extern double logb (double);
   extern float logbf (float);
   extern long double logbl (long double);
-#553 "C:/Xilinx/Vivado/2018.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 3
+# 553 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 3
   extern float modff (float, float*);
   extern long double modfl (long double, long double*);
 
@@ -653,9 +636,9 @@ typedef double double_t;
 
 
   extern float fabsf (float x);
-#583 "C:/Xilinx/Vivado/2018.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 3
+# 583 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 3
   extern long double fabsl (long double);
-#595 "C:/Xilinx/Vivado/2018.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 3
+# 595 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 3
   extern double hypot (double, double) ;
   extern float hypotf (float x, float y);
 
@@ -721,7 +704,7 @@ extern long lrintl (long double);
 __extension__ long long llrint (double);
 __extension__ long long llrintf (float);
 __extension__ long long llrintl (long double);
-#739 "C:/Xilinx/Vivado/2018.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 3
+# 739 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 3
   extern double round (double);
   extern float roundf (float);
   extern long double roundl (long double);
@@ -763,7 +746,7 @@ __extension__ long long llrintl (long double);
   extern double nan(const char *tagp);
   extern float nanf(const char *tagp);
   extern long double nanl(const char *tagp);
-#788 "C:/Xilinx/Vivado/2018.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 3
+# 788 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 3
   extern double nextafter (double, double);
   extern float nextafterf (float, float);
   extern long double nextafterl (long double, long double);
@@ -799,7 +782,7 @@ __extension__ long long llrintl (long double);
   extern double fma (double, double, double);
   extern float fmaf (float, float, float);
   extern long double fmal (long double, long double, long double);
-#871 "C:/Xilinx/Vivado/2018.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 3
+# 871 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 3
    __attribute__ ((__dllimport__)) float _copysignf (float _Number,float _Sign);
    __attribute__ ((__dllimport__)) float _chgsignf (float _X);
    __attribute__ ((__dllimport__)) float _logbf(float _X);
@@ -811,20 +794,18 @@ __extension__ long long llrintl (long double);
 
 
    extern long double _chgsignl (long double);
-#893 "C:/Xilinx/Vivado/2018.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 3
+# 893 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 3
 }
 
 
 
 
 #pragma pack(pop)
-#4 "VCNN/src/lib/layers/Softmax.cpp" 2
-}
-#4 "VCNN/src/lib/layers/Softmax.cpp"
+# 3 "VCNN_Update/src/lib/layers/Softmax.cpp" 2
 
 
 
-void Softmax(Layer current, LayerWeight cw, Layer next){
+void Softmax(Layer current, Layer next){
  float exp_sum = 0.0;
  int channels = current.input_channel_num;
  int height = current.input_feature_map_height;
@@ -840,17 +821,3 @@ void Softmax(Layer current, LayerWeight cw, Layer next){
   *(next.input_data+i) = (*(next.input_data+i))/exp_sum;
  }
 }
-
-class ssdm_global_array_Softmaxpp0cppaplinecpp {
-	public:
-		 inline __attribute__((always_inline)) ssdm_global_array_Softmaxpp0cppaplinecpp() {
-			_ssdm_SpecConstant(&nLayers);
-			_ssdm_SpecConstant(&dataScale);
-			_ssdm_SpecConstant(&nOutput);
-			_ssdm_SpecConstant(&nChannels);
-			_ssdm_SpecConstant(&imgWidth);
-			_ssdm_SpecConstant(&imgHeight);
-			_ssdm_SpecConstant(&nLayerTypes);
-		}
-};
-static ssdm_global_array_Softmaxpp0cppaplinecpp ssdm_global_array_ins;
