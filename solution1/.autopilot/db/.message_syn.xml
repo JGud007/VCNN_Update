@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1312" content="Analyzing design file &apos;VCNN/src/lib/layers/Softmax.cpp&apos; ..." tag=""/>
+	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1378" content="In file included from VCNN/src/lib/layers/Softmax.cpp:1:
+In file included from VCNN/src/lib/layers/Softmax.cpp:1:
+VCNN/src/lib/layers/layers.h:6:17: warning: using directive refers to implicitly-defined namespace &apos;std&apos;
+using namespace std;
+                ^
+1 warning generated." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1312" content="Analyzing design file &apos;VCNN/src/custom/caffe_model_layer.cpp&apos; ..." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1312" content="Analyzing design file &apos;VCNN/src/lib/layers/convolution.cpp&apos; ..." tag=""/>
+	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1378" content="In file included from VCNN/src/lib/layers/convolution.cpp:1:
+In file included from VCNN/src/lib/layers/convolution.cpp:1:
+VCNN/src/lib/layers/layers.h:6:17: warning: using directive refers to implicitly-defined namespace &apos;std&apos;
+using namespace std;
+                ^
+1 warning generated." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1312" content="Analyzing design file &apos;VCNN/src/custom/custom.cpp&apos; ..." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1312" content="Analyzing design file &apos;VCNN/src/lib/layers/inner_product.cpp&apos; ..." tag=""/>
+	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1378" content="In file included from VCNN/src/lib/layers/inner_product.cpp:1:
+In file included from VCNN/src/lib/layers/inner_product.cpp:1:
+VCNN/src/lib/layers/layers.h:6:17: warning: using directive refers to implicitly-defined namespace &apos;std&apos;
+using namespace std;
+                ^
+1 warning generated." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1312" content="Analyzing design file &apos;VCNN/src/lib/main.cpp&apos; ..." tag=""/>
+	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1378" content="In file included from VCNN/src/lib/main.cpp:1:
+In file included from VCNN/src/lib/main.cpp:1:
+VCNN/src/lib/./layers/layers.h:6:17: warning: using directive refers to implicitly-defined namespace &apos;std&apos;
+using namespace std;
+                ^
+1 warning generated." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1312" content="Analyzing design file &apos;VCNN/src/lib/layers/pooling.cpp&apos; ..." tag=""/>
+	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1378" content="In file included from VCNN/src/lib/layers/pooling.cpp:1:
+In file included from VCNN/src/lib/layers/pooling.cpp:1:
+VCNN/src/lib/layers/layers.h:6:17: warning: using directive refers to implicitly-defined namespace &apos;std&apos;
+using namespace std;
+                ^
+1 warning generated." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1312" content="Analyzing design file &apos;VCNN/src/lib/layers/relu.cpp&apos; ..." tag=""/>
+	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1378" content="In file included from VCNN/src/lib/layers/relu.cpp:1:
+In file included from VCNN/src/lib/layers/relu.cpp:19:
+VCNN/src/lib/layers/layers.h:6:17: warning: using directive refers to implicitly-defined namespace &apos;std&apos;
+using namespace std;
+                ^
+1 warning generated." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1312" content="Analyzing design file &apos;VCNN/src/lib/layers/return_callback.cpp&apos; ..." tag=""/>
+	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1378" content="In file included from VCNN/src/lib/layers/return_callback.cpp:1:
+In file included from VCNN/src/lib/layers/return_callback.cpp:1:
+VCNN/src/lib/layers/layers.h:6:17: warning: using directive refers to implicitly-defined namespace &apos;std&apos;
+using namespace std;
+                ^
+1 warning generated." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1465" content="Validating synthesis directives ..." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:01:02 . Memory (MB): peak = 140.559 ; gain = 83.109" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:01:08 . Memory (MB): peak = 140.559 ; gain = 83.109" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1467" content="Starting code transformations ..." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:01:11 . Memory (MB): peak = 140.559 ; gain = 83.109" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1472" content="Checking synthesizability ..." tag=""/>
+	<Message prefix="[SYNCHK 200-11]" severity="ERROR" keynum="576" content="VCNN/src/lib/main.cpp:8: Argument &apos;layer_weights.conv_filter_weight&apos; of function &apos;neural_net&apos; (VCNN/src/lib/main.cpp:8) has an unsynthesizable type (possible cause(s): pointer to pointer or global pointer)." tag=""/>
+	<Message prefix="[SYNCHK 200-11]" severity="ERROR" keynum="576" content="VCNN/src/lib/main.cpp:20: Variable &apos;&apos; has an unsynthesizable type &apos;%%struct.Layer.1.4.5 = type { i32, i3, i32, i32, i32, i32, i3...&apos; (possible cause(s): structure variable cannot be decomposed due to (1) unsupported type conversion; (2) memory copy operation; (3) function pointer used in struct; (4) unsupported pointer comparison)." tag=""/>
+	<Message prefix="[SYNCHK 200-61]" severity="ERROR" keynum="574" content="VCNN/src/lib/main.cpp:17: unsupported memory access on variable &apos;layers.input_data&apos; which is (or contains) an array with unknown size at compile time." tag=""/>
+	<Message prefix="[SYNCHK 200-76]" severity="ERROR" keynum="602" content="VCNN/src/lib/main.cpp:20: calling a function pointer is not supported." tag=""/>
+	<Message prefix="[SYNCHK 200-10]" severity="INFO" keynum="597" content="4 error(s), 0 warning(s)." tag=""/>
+	<Message prefix="[HLS 200-70]" severity="ERROR" keynum="HLS_70_1855" content="Synthesizability check failed." tag=""/>
+	<Message prefix="[HLS 200-150]" severity="INFO" keynum="11" content="command &apos;ap_source&apos; returned error code
+    while executing
+&quot;source C:/VCNN/solution1/csynth.tcl&quot;
+    invoked from within
+&quot;hls::main C:/VCNN/solution1/csynth.tcl&quot;
+    (&quot;uplevel&quot; body line 1)
+    invoked from within
+&quot;uplevel 1 hls::main {*}$args&quot;
+    (procedure &quot;hls_proc&quot; line 5)
+    invoked from within
+&quot;hls_proc $argv&quot;" tag=""/>
+</Messages>
