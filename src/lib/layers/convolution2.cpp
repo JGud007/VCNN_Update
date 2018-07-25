@@ -15,7 +15,7 @@ inline float conv3d2(Layer current, int fn, int ksize, int channels, int h, int 
 			{
 				//float kernel_v = *(kernel + c*(karea) + (offset+i)*ksize + (offset+j));
 				float kernel_v = conv_filter_weight2[c*(karea) + (offset+i)*ksize + (offset+j)+ fn];
-				float image_v = GET_INPUT_DATA(current, c, h+i, w+j);
+				float image_v = *GET_INPUT_DATA(current, c, h+i, w+j);
 				r+= kernel_v * image_v;
 			}
 
@@ -48,8 +48,8 @@ void Convolution2(Layer current, Layer next){
 //					if(fn == 0){
 //						printf("filter<%d,%d,%d> = conv3d + bias = %f + %f = %f \n",fn, hc,wc,temp,*(bias + fn),temp+*(bias + fn));
 //					}
-					//GET_INPUT_DATA(next,fn,hc,wc) = temp+*(bias + fn);
-					GET_INPUT_DATA(next,fn,hc,wc) = temp+conv_bias2[fn];
+					//*GET_INPUT_DATA(next,fn,hc,wc) = temp+*(bias + fn);
+					*GET_INPUT_DATA(next,fn,hc,wc) = temp+conv_bias2[fn];
 				}
 	}
 }

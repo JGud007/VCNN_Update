@@ -36,6 +36,16 @@ typedef  struct {
     int input_feature_map_width;
 
     float* input_data;
+    // float* layer0[784];
+    // float* layer1[11520];
+    // float* layer2[2880];
+    // float* layer3[3200];
+    // float* layer4[800];
+    // float* layer5[500];
+    // float* layer6[500];
+    // float* layer7[10];
+    // float* layer8[10];
+
 } Layer;
 
 static int const nChannels = 1;

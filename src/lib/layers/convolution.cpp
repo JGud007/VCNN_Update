@@ -15,7 +15,7 @@ inline float conv3d1(Layer current, int fn, int ksize, int channels, int h, int 
 			for (int j = -offset; j<offset+1; j++)
 			{
 				float kernel_v = conv_filter_weight[c*(karea) + (offset+i)*ksize + (offset+j) + fn];
-				float image_v = GET_INPUT_DATA(current, c, h+i, w+j);
+				float image_v = *GET_INPUT_DATA(current, c, h+i, w+j);
 
 				r+= kernel_v * image_v;
 			}
@@ -38,7 +38,7 @@ void Convolution(Layer current, Layer next){
 			for(int w = offset_idx, wc = 0; w < width; w+=stride, wc++){
 				//the conv is like in volume
 				float temp = conv3d1(current, fn*filterSize, ksize, channels, h, w); //need change here
-				GET_INPUT_DATA(next,fn,hc,wc) = temp+conv_bias[fn];
+				*GET_INPUT_DATA(next,fn,hc,wc) = temp+conv_bias[fn];
 			}
 	}
 }

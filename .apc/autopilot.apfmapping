@@ -2,7 +2,6 @@
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
     <originFiles name="Softmax.cpp" path="C:\Users\niles\Downloads\Uni\PartIV\Code\MainRepo\VCNN_Update\src\lib\layers\Softmax.cpp"/>
-    <originFiles name="VCNN.h" path="C:\Users\niles\Downloads\Uni\PartIV\Code\MainRepo\VCNN.h"/>
     <originFiles name="caffe_model_layer.cpp" path="C:\Users\niles\Downloads\Uni\PartIV\Code\MainRepo\VCNN_Update\src\custom\caffe_model_layer.cpp"/>
     <originFiles name="caffe_model_layer.h" path="C:\Users\niles\Downloads\Uni\PartIV\Code\MainRepo\VCNN_Update\src\custom\caffe_model_layer.h"/>
     <originFiles name="convolution.cpp" path="C:\Users\niles\Downloads\Uni\PartIV\Code\MainRepo\VCNN_Update\src\lib\layers\convolution.cpp"/>
@@ -17,6 +16,7 @@
     <originFiles name="relu.cpp" path="C:\Users\niles\Downloads\Uni\PartIV\Code\MainRepo\VCNN_Update\src\lib\layers\relu.cpp"/>
     <originFiles name="return_callback.cpp" path="C:\Users\niles\Downloads\Uni\PartIV\Code\MainRepo\VCNN_Update\src\lib\layers\return_callback.cpp"/>
     <originFiles name="util.h" path="C:\Users\niles\Downloads\Uni\PartIV\Code\MainRepo\VCNN_Update\src\lib\util.h"/>
+    <originFiles name="util.cpp" path="C:\Users\niles\Downloads\Uni\PartIV\Code\MainRepo\VCNN_Update\src\lib\util.cpp"/>
   </source>
   <testbench>
     <originFiles name="test.cpp" path="C:\Users\niles\Downloads\Uni\PartIV\Code\MainRepo\VCNN_Update\src\custom\test.cpp"/>

@@ -14,7 +14,7 @@ void neural_net(MEAN_IMAGE_TYPE mean_image[nChannels][imgHeight][imgWidth], INPU
 		for(int j = 0; j<imgHeight; j++)
 			for(int k = 0; k<imgWidth; k++){
 				float temp =  (input_image[i][j][k] - mean_image[i][j][k]) * dataScale;
-				GET_INPUT_DATA(layers[0], i,j,k) = temp;
+				*GET_INPUT_DATA(layers[0], i,j,k) = temp;
 			}
 	for(int i = 0;i<nLayers;i++){
 		layer_dict[layers[i].type](layers[i], layers[i+1]);

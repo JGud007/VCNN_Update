@@ -6,7 +6,6 @@
 open_project VCNN_Update
 set_top neural_net
 add_files VCNN_Update/src/lib/layers/Softmax.cpp
-add_files VCNN.h
 add_files VCNN_Update/src/custom/caffe_model_layer.cpp
 add_files VCNN_Update/src/custom/caffe_model_layer.h
 add_files VCNN_Update/src/lib/layers/convolution.cpp
@@ -20,6 +19,7 @@ add_files VCNN_Update/src/lib/main.cpp
 add_files VCNN_Update/src/lib/layers/pooling.cpp
 add_files VCNN_Update/src/lib/layers/relu.cpp
 add_files VCNN_Update/src/lib/layers/return_callback.cpp
+add_files VCNN_Update/src/lib/util.cpp
 add_files VCNN_Update/src/lib/util.h
 add_files -tb VCNN_Update/src/custom/test.cpp
 add_files -tb VCNN_Update/src/custom/mnist/mnist_data.h

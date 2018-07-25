@@ -11,11 +11,11 @@ void Relu(Layer current, LayerWeight cw, Layer next) {
 	for(i=0;i<inputs;i++){
 		for(h=0; h<height;h++){
 			for(w=0;w<width;w++){
-				float data = GET_INPUT_DATA(current,i,h,w);
+				float data = *(GET_INPUT_DATA(current,i,h,w));
 				if(data < 0){
 					data = 0;
 				}
-				GET_INPUT_DATA(next,i,h,w) = data;
+				*(GET_INPUT_DATA(next,i,h,w)) = data;
 			}
 		}
 	}

@@ -66,10 +66,10 @@ VCNN_Update/src/lib/layers/layers.h:6:17: warning: using directive refers to imp
 using namespace std;
                 ^
 1 warning generated.\n"/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Linking Time (s): cpu = 00:00:03 ; elapsed = 00:02:08 . Memory (MB): peak = 139.625 ; gain = 81.973"/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Checking Pragmas Time (s): cpu = 00:00:03 ; elapsed = 00:02:08 . Memory (MB): peak = 139.625 ; gain = 81.973"/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Linking Time (s): cpu = 00:00:03 ; elapsed = 00:01:45 . Memory (MB): peak = 139.449 ; gain = 82.141"/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Checking Pragmas Time (s): cpu = 00:00:03 ; elapsed = 00:01:45 . Memory (MB): peak = 139.449 ; gain = 82.141"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1467" tag="" content="Starting code transformations ..."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Standard Transforms Time (s): cpu = 00:00:03 ; elapsed = 00:02:10 . Memory (MB): peak = 139.625 ; gain = 81.973"/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Standard Transforms Time (s): cpu = 00:00:03 ; elapsed = 00:01:46 . Memory (MB): peak = 139.449 ; gain = 82.141"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1472" tag="" content="Checking synthesizability ..."/>
 	<Message severity="ERROR" prefix="[SYNCHK 200-11]" key="SYNCHK_TYPE_NO_SUPPORT_356" tag="" content="VCNN_Update/src/lib/main.cpp:20: Variable &apos;&apos; has an unsynthesizable type &apos;%struct.Layer.0.1.2 = type { i32, i3, i32, i32, i32, i32, i3...&apos; (possible cause(s): structure variable cannot be decomposed due to (1) unsupported type conversion; (2) memory copy operation; (3) function pointer used in struct; (4) unsupported pointer comparison)."/>
 	<Message severity="ERROR" prefix="[SYNCHK 200-11]" key="SYNCHK_TYPE_NO_SUPPORT_356" tag="" content="VCNN_Update/src/lib/main.cpp:17: Constant &apos;layers.input_data&apos; has an unsynthesizable type &apos;[10 x float*]*&apos; (possible cause(s): pointer to pointer or global pointer)."/>

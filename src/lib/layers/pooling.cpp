@@ -9,7 +9,7 @@ inline float max(Layer current, int ksize, int channel, int h, int w){
 	for (int i = 0; i < ksize; i++)
 		for (int j = 0; j < ksize; j++)
 		{
-			float tmp =  GET_INPUT_DATA(current, channel, h+i, w+j);
+			float tmp =  *(GET_INPUT_DATA(current, channel, h+i, w+j));
 			r = r > tmp ? r : tmp;
 		}
 	return r;
@@ -29,7 +29,7 @@ void PoolingMax(Layer current, Layer next){
 			for(int w = 0, wc = 0; w < width; w+=stride, wc++)
 				{
 //				counter++;
-				GET_INPUT_DATA(next,c,hc,wc) = max(current, ksize, c, h, w);
+				*(GET_INPUT_DATA(next,c,hc,wc)) = max(current, ksize, c, h, w);
 				}
 //	printf("counter = %d", counter);
 }
