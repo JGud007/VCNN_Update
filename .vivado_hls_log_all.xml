@@ -13,6 +13,8 @@
       <mgLog/>
       <packageLog/>
       <csimLog>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="VCNN_Update" solutionName="solution1" date="2018-07-25T13:40:17.589+1200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="VCNN_Update" solutionName="solution1" date="2018-07-25T13:39:33.817+1200"/>
         <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="VCNN_Update" solutionName="solution1" date="2018-07-25T12:28:12.736+1200"/>
         <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="VCNN_Update" solutionName="solution1" date="2018-07-25T12:27:14.515+1200"/>
         <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="VCNN_Update" solutionName="solution1" date="2018-07-25T12:25:56.356+1200"/>
