@@ -56,7 +56,7 @@
 #Do NOT ignore *.xpr files
 !*.xpr
 #Include *.xml files for 2013.4 or earlier version
-!*.xml
+*.xml
 #########
 #Constraint files
 #########
@@ -65,7 +65,7 @@
 #########
 #TCL - files
 #########
-!*.tcl
+*.tcl
 #########
 #Journal - files
 #########
@@ -95,3 +95,4 @@
 !.settings/*
 !.apc/*
 .gitmodules
+solution1
