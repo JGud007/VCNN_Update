@@ -35,7 +35,7 @@ typedef  struct {
     int input_feature_map_height;
     int input_feature_map_width;
 
-    float* input_data;
+    // float* input_data;
     // float* layer0[784];
     // float* layer1[11520];
     // float* layer2[2880];

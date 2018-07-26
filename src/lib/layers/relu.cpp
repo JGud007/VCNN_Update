@@ -6,7 +6,7 @@
 //     return l.input_data + (i)*(l.input_feature_map_height*l.input_feature_map_width) + (j)*l.input_feature_map_width + (k);
 // }
 
-void Relu(Layer current, Layer next) {
+void Relu(Layer current, Layer next, float *layer0, float *layer1){
 
 	int inputs = current.input_channel_num;
 	int height = current.input_feature_map_height;
@@ -16,11 +16,11 @@ void Relu(Layer current, Layer next) {
 	for(i=0;i<inputs;i++){
 		for(h=0; h<height;h++){
 			for(w=0;w<width;w++){
-				float data = *(GET_INPUT_DATA(current,i,h,w));
+				float data = *(GET_INPUT_DATA(current,i,h,w,layer0));
 				if(data < 0){
 					data = 0;
 				}
-				*(GET_INPUT_DATA(next,i,h,w)) = data;
+				*(GET_INPUT_DATA(next,i,h,w,layer1)) = data;
 			}
 		}
 	}

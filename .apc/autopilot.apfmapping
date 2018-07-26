@@ -15,8 +15,8 @@
     <originFiles name="pooling.cpp" path="C:\Users\niles\Downloads\Uni\PartIV\Code\MainRepo\VCNN_Update\src\lib\layers\pooling.cpp"/>
     <originFiles name="relu.cpp" path="C:\Users\niles\Downloads\Uni\PartIV\Code\MainRepo\VCNN_Update\src\lib\layers\relu.cpp"/>
     <originFiles name="return_callback.cpp" path="C:\Users\niles\Downloads\Uni\PartIV\Code\MainRepo\VCNN_Update\src\lib\layers\return_callback.cpp"/>
-    <originFiles name="util.h" path="C:\Users\niles\Downloads\Uni\PartIV\Code\MainRepo\VCNN_Update\src\lib\util.h"/>
     <originFiles name="util.cpp" path="C:\Users\niles\Downloads\Uni\PartIV\Code\MainRepo\VCNN_Update\src\lib\util.cpp"/>
+    <originFiles name="util.h" path="C:\Users\niles\Downloads\Uni\PartIV\Code\MainRepo\VCNN_Update\src\lib\util.h"/>
   </source>
   <testbench>
     <originFiles name="test.cpp" path="C:\Users\niles\Downloads\Uni\PartIV\Code\MainRepo\VCNN_Update\src\custom\test.cpp"/>

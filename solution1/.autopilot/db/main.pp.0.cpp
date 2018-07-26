@@ -179,8 +179,7 @@ typedef struct {
     int input_channel_num;
     int input_feature_map_height;
     int input_feature_map_width;
-
-    float* input_data;
+# 49 "VCNN_Update/src/lib/./layers/../../custom/caffe_model_layer.h"
 } Layer;
 
 static int const nChannels = 1;
@@ -199,37 +198,20 @@ extern Layer layers[10];
 using namespace std;
 
 
-
-typedef void (*Layer_f) (Layer current, Layer next);
-
-
-
-void Convolution(Layer current, Layer next);
-void Convolution2(Layer current, Layer next);
-void PoolingMax(Layer current, Layer next);
-void Relu(Layer current, Layer next);
-void InnerProduct(Layer current, Layer next);
-void InnerProduct2(Layer current, Layer next);
-void Softmax(Layer current, Layer next);
-void ReturnCallback(Layer current, Layer next);
-
-
-
-static Layer_f layer_dict[nLayerTypes] = {
-  Convolution,
-  Convolution2,
-  PoolingMax,
-  Relu,
-  InnerProduct,
-  InnerProduct2,
-  Softmax,
-  ReturnCallback
-};
+void Convolution(Layer current, Layer next, float *layer0, float *layer1);
+void Convolution2(Layer current, Layer next, float *layer0, float *layer1);
+void PoolingMax(Layer current, Layer next, float *layer0, float *layer1);
+void Relu(Layer current, Layer next, float *layer0, float *layer1);
+void InnerProduct(Layer current, Layer next, float *layer0, float *layer1);
+void InnerProduct2(Layer current, Layer next, float *layer0, float *layer1);
+void Softmax(Layer current, Layer next, float *layer0, float *layer1);
 # 1 "VCNN_Update/src/lib/main.cpp" 2
 
 
 # 1 "VCNN_Update/src/lib/util.h" 1
-# 3 "VCNN_Update/src/lib/main.cpp" 2
+
+
+
 
 # 1 "VCNN_Update/src/lib/../custom/custom.h" 1
 
@@ -736,6 +718,18 @@ extern "C" {
 
 void return_callback(Layer layer);
 void neural_net(float mean_image[nChannels][imgHeight][imgWidth], int input_image[nChannels][imgHeight][imgWidth], float result[nOutput]);
+# 5 "VCNN_Update/src/lib/util.h" 2
+
+
+float* GET_INPUT_DATA(Layer l, int i, int j, int k, float *layerAddress);
+# 3 "VCNN_Update/src/lib/main.cpp" 2
+
+# 1 "VCNN_Update/src/lib/../custom/custom.h" 1
+
+
+
+void return_callback(Layer layer);
+void neural_net(float mean_image[nChannels][imgHeight][imgWidth], int input_image[nChannels][imgHeight][imgWidth], float result[nOutput]);
 # 4 "VCNN_Update/src/lib/main.cpp" 2
 
 
@@ -746,18 +740,46 @@ void neural_net(float mean_image[nChannels][imgHeight][imgWidth], int input_imag
 
 
 
+
+
+
+ float layer0[784] = {0};
+    float layer1[11520] = {0};
+    float layer2[2880] = {0};
+    float layer3[3200] = {0};
+    float layer4[800] = {0};
+    float layer5[500] = {0};
+    float layer6[500] = {0};
+    float layer7[10] = {0};
+    float layer8[10] = {0};
+    float layer9[10] = {0};
+
+
  for(int i = 0; i<nChannels; i++)
   for(int j = 0; j<imgHeight; j++)
    for(int k = 0; k<imgWidth; k++){
     float temp = (input_image[i][j][k] - mean_image[i][j][k]) * dataScale;
-    *(layers[0].input_data + (i)*(layers[0].input_feature_map_height*layers[0].input_feature_map_width) + (j)*layers[0].input_feature_map_width + (k)) = temp;
+
+    *GET_INPUT_DATA(layers[0], i,j,k,&layer0[0]) = temp;
    }
- for(int i = 0;i<nLayers;i++){
-  layer_dict[layers[i].type](layers[i], layers[i+1]);
- }
+
+
+
+
+ Convolution(layers[0], layers[1], &layer0[0], &layer1[0]);
+ PoolingMax(layers[1], layers[2], &layer1[0], &layer2[0]);
+ Convolution2(layers[2], layers[3], &layer2[0], &layer3[0]);
+
+ PoolingMax(layers[3], layers[4], &layer3[0], &layer4[0]);
+ InnerProduct(layers[4], layers[5], &layer4[0], &layer5[0]);
+ Relu(layers[5], layers[6], &layer5[0], &layer6[0]);
+ InnerProduct2(layers[6], layers[7], &layer6[0], &layer7[0]);
+ Softmax(layers[7], layers[8], &layer7[0], &layer8[0]);
+
+
 
  for(int i = 0;i<nOutput;i++){
-  result[i] = *(layers[nLayers-1].input_data+i);
+  result[i] = *(&layer8[0]+i);
  }
 
 }

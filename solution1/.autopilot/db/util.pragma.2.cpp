@@ -1,5 +1,5 @@
-# 1 "VCNN_Update/src/custom/custom.cpp"
-# 1 "VCNN_Update/src/custom/custom.cpp" 1
+# 1 "C:/Users/niles/Downloads/Uni/PartIV/Code/MainRepo/VCNN_Update/solution1/.autopilot/db/util.pragma.1.cpp"
+# 1 "C:/Users/niles/Downloads/Uni/PartIV/Code/MainRepo/VCNN_Update/solution1/.autopilot/db/util.pragma.1.cpp" 1
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 152 "<built-in>" 3
@@ -145,9 +145,164 @@ extern "C" {
 }
 # 9 "<command line>" 2
 # 1 "<built-in>" 2
-# 1 "VCNN_Update/src/custom/custom.cpp" 2
-# 1 "VCNN_Update/src/custom/custom.h" 1
-# 1 "VCNN_Update/src/custom/caffe_model_layer.h" 1
+# 1 "C:/Users/niles/Downloads/Uni/PartIV/Code/MainRepo/VCNN_Update/solution1/.autopilot/db/util.pragma.1.cpp" 2
+# 1 "VCNN_Update/src/lib/util.cpp"
+# 1 "VCNN_Update/src/lib/util.cpp" 1
+# 1 "<built-in>" 1
+# 1 "<built-in>" 3
+# 152 "<built-in>" 3
+# 1 "<command line>" 1
+
+
+
+
+
+
+
+# 1 "C:/Xilinx/Vivado/2018.2/common/technology/autopilot\\etc/autopilot_ssdm_op.h" 1
+# 157 "C:/Xilinx/Vivado/2018.2/common/technology/autopilot\\etc/autopilot_ssdm_op.h"
+extern "C" {
+
+
+
+
+
+
+    void _ssdm_op_IfRead(...) __attribute__ ((nothrow));
+    void _ssdm_op_IfWrite(...) __attribute__ ((nothrow));
+    unsigned int __attribute__ ((bitwidth(1))) _ssdm_op_IfNbRead(...) __attribute__ ((nothrow));
+    unsigned int __attribute__ ((bitwidth(1))) _ssdm_op_IfNbWrite(...) __attribute__ ((nothrow));
+    unsigned int __attribute__ ((bitwidth(1))) _ssdm_op_IfCanRead(...) __attribute__ ((nothrow));
+    unsigned int __attribute__ ((bitwidth(1))) _ssdm_op_IfCanWrite(...) __attribute__ ((nothrow));
+
+
+    void _ssdm_StreamRead(...) __attribute__ ((nothrow));
+    void _ssdm_StreamWrite(...) __attribute__ ((nothrow));
+    unsigned int __attribute__ ((bitwidth(1))) _ssdm_StreamNbRead(...) __attribute__ ((nothrow));
+    unsigned int __attribute__ ((bitwidth(1))) _ssdm_StreamNbWrite(...) __attribute__ ((nothrow));
+    unsigned int __attribute__ ((bitwidth(1))) _ssdm_StreamCanRead(...) __attribute__ ((nothrow));
+    unsigned int __attribute__ ((bitwidth(1))) _ssdm_StreamCanWrite(...) __attribute__ ((nothrow));
+    unsigned _ssdm_StreamSize(...) __attribute__ ((nothrow));
+
+
+
+
+    void _ssdm_op_MemShiftRead(...) __attribute__ ((nothrow));
+
+    void _ssdm_op_Wait(...) __attribute__ ((nothrow));
+    void _ssdm_op_Poll(...) __attribute__ ((nothrow));
+
+    void _ssdm_op_Return(...) __attribute__ ((nothrow));
+
+
+    void _ssdm_op_SpecSynModule(...) __attribute__ ((nothrow));
+    void _ssdm_op_SpecTopModule(...) __attribute__ ((nothrow));
+    void _ssdm_op_SpecProcessDecl(...) __attribute__ ((nothrow));
+    void _ssdm_op_SpecProcessDef(...) __attribute__ ((nothrow));
+    void _ssdm_op_SpecPort(...) __attribute__ ((nothrow));
+    void _ssdm_op_SpecConnection(...) __attribute__ ((nothrow));
+    void _ssdm_op_SpecChannel(...) __attribute__ ((nothrow));
+    void _ssdm_op_SpecSensitive(...) __attribute__ ((nothrow));
+    void _ssdm_op_SpecModuleInst(...) __attribute__ ((nothrow));
+    void _ssdm_op_SpecPortMap(...) __attribute__ ((nothrow));
+
+    void _ssdm_op_SpecReset(...) __attribute__ ((nothrow));
+
+    void _ssdm_op_SpecPlatform(...) __attribute__ ((nothrow));
+    void _ssdm_op_SpecClockDomain(...) __attribute__ ((nothrow));
+    void _ssdm_op_SpecPowerDomain(...) __attribute__ ((nothrow));
+
+    int _ssdm_op_SpecRegionBegin(...) __attribute__ ((nothrow));
+    int _ssdm_op_SpecRegionEnd(...) __attribute__ ((nothrow));
+
+    void _ssdm_op_SpecLoopName(...) __attribute__ ((nothrow));
+
+    void _ssdm_op_SpecLoopTripCount(...) __attribute__ ((nothrow));
+
+    int _ssdm_op_SpecStateBegin(...) __attribute__ ((nothrow));
+    int _ssdm_op_SpecStateEnd(...) __attribute__ ((nothrow));
+
+    void _ssdm_op_SpecInterface(...) __attribute__ ((nothrow));
+
+    void _ssdm_op_SpecPipeline(...) __attribute__ ((nothrow));
+    void _ssdm_op_SpecDataflowPipeline(...) __attribute__ ((nothrow));
+
+
+    void _ssdm_op_SpecLatency(...) __attribute__ ((nothrow));
+    void _ssdm_op_SpecParallel(...) __attribute__ ((nothrow));
+    void _ssdm_op_SpecProtocol(...) __attribute__ ((nothrow));
+    void _ssdm_op_SpecOccurrence(...) __attribute__ ((nothrow));
+
+    void _ssdm_op_SpecResource(...) __attribute__ ((nothrow));
+    void _ssdm_op_SpecResourceLimit(...) __attribute__ ((nothrow));
+    void _ssdm_op_SpecCHCore(...) __attribute__ ((nothrow));
+    void _ssdm_op_SpecFUCore(...) __attribute__ ((nothrow));
+    void _ssdm_op_SpecIFCore(...) __attribute__ ((nothrow));
+    void _ssdm_op_SpecIPCore(...) __attribute__ ((nothrow));
+    void _ssdm_op_SpecKeepValue(...) __attribute__ ((nothrow));
+    void _ssdm_op_SpecMemCore(...) __attribute__ ((nothrow));
+
+    void _ssdm_op_SpecExt(...) __attribute__ ((nothrow));
+
+
+
+
+    void _ssdm_SpecArrayDimSize(...) __attribute__ ((nothrow));
+
+    void _ssdm_RegionBegin(...) __attribute__ ((nothrow));
+    void _ssdm_RegionEnd(...) __attribute__ ((nothrow));
+
+    void _ssdm_Unroll(...) __attribute__ ((nothrow));
+    void _ssdm_UnrollRegion(...) __attribute__ ((nothrow));
+
+    void _ssdm_InlineAll(...) __attribute__ ((nothrow));
+    void _ssdm_InlineLoop(...) __attribute__ ((nothrow));
+    void _ssdm_Inline(...) __attribute__ ((nothrow));
+    void _ssdm_InlineSelf(...) __attribute__ ((nothrow));
+    void _ssdm_InlineRegion(...) __attribute__ ((nothrow));
+
+    void _ssdm_SpecArrayMap(...) __attribute__ ((nothrow));
+    void _ssdm_SpecArrayPartition(...) __attribute__ ((nothrow));
+    void _ssdm_SpecArrayReshape(...) __attribute__ ((nothrow));
+
+    void _ssdm_SpecStream(...) __attribute__ ((nothrow));
+
+    void _ssdm_SpecExpr(...) __attribute__ ((nothrow));
+    void _ssdm_SpecExprBalance(...) __attribute__ ((nothrow));
+
+    void _ssdm_SpecDependence(...) __attribute__ ((nothrow));
+
+    void _ssdm_SpecLoopMerge(...) __attribute__ ((nothrow));
+    void _ssdm_SpecLoopFlatten(...) __attribute__ ((nothrow));
+    void _ssdm_SpecLoopRewind(...) __attribute__ ((nothrow));
+
+    void _ssdm_SpecFuncInstantiation(...) __attribute__ ((nothrow));
+    void _ssdm_SpecFuncBuffer(...) __attribute__ ((nothrow));
+    void _ssdm_SpecFuncExtract(...) __attribute__ ((nothrow));
+    void _ssdm_SpecConstant(...) __attribute__ ((nothrow));
+
+    void _ssdm_DataPack(...) __attribute__ ((nothrow));
+    void _ssdm_SpecDataPack(...) __attribute__ ((nothrow));
+
+    void _ssdm_op_SpecBitsMap(...) __attribute__ ((nothrow));
+    void _ssdm_op_SpecLicense(...) __attribute__ ((nothrow));
+
+    void __xilinx_ip_top(...) __attribute__ ((nothrow));
+
+
+}
+# 9 "<command line>" 2
+# 1 "<built-in>" 2
+# 1 "VCNN_Update/src/lib/util.cpp" 2
+# 1 "VCNN_Update/src/lib/util.h" 1
+
+
+
+# 1 "VCNN_Update/src/lib/layers/layers.h" 1
+
+
+
+# 1 "VCNN_Update/src/lib/layers/../../custom/caffe_model_layer.h" 1
 
 
 static int const nLayers = 9;
@@ -158,8 +313,8 @@ typedef enum {CONVOLUTION,CONVOLUTION2,POOLING_MAX,RELU,INNERPRODUCT,INNERPRODUC
 typedef struct {
     int id;
     LayerType type;
-# 20 "VCNN_Update/src/custom/caffe_model_layer.h"
-    int conv_filter_channels;
+# 20 "VCNN_Update/src/lib/layers/../../custom/caffe_model_layer.h"
+ int conv_filter_channels;
     int conv_filter_size;
     int conv_filter_num;
     int conv_stride;
@@ -176,8 +331,7 @@ typedef struct {
     int input_channel_num;
     int input_feature_map_height;
     int input_feature_map_width;
-
-    float* input_data;
+# 49 "VCNN_Update/src/lib/layers/../../custom/caffe_model_layer.h"
 } Layer;
 
 static int const nChannels = 1;
@@ -190,7 +344,22 @@ extern float mean_image[1][28][28];
 
 
 extern Layer layers[10];
-# 1 "VCNN_Update/src/custom/custom.h" 2
+# 4 "VCNN_Update/src/lib/layers/layers.h" 2
+
+
+using namespace std;
+
+
+void Convolution(Layer current, Layer next, float *layer0, float *layer1);
+void Convolution2(Layer current, Layer next, float *layer0, float *layer1);
+void PoolingMax(Layer current, Layer next, float *layer0, float *layer1);
+void Relu(Layer current, Layer next, float *layer0, float *layer1);
+void InnerProduct(Layer current, Layer next, float *layer0, float *layer1);
+void InnerProduct2(Layer current, Layer next, float *layer0, float *layer1);
+void Softmax(Layer current, Layer next, float *layer0, float *layer1);
+# 4 "VCNN_Update/src/lib/util.h" 2
+
+# 1 "VCNN_Update/src/lib/../custom/custom.h" 1
 
 # 1 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 1 3
 
@@ -351,7 +520,7 @@ const char *__mingw_get_crt_info (void);
 
 extern "C" {
 # 26 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 3
-  struct _iobuf {
+ struct _iobuf {
     char *_ptr;
     int _cnt;
     char *_base;
@@ -363,7 +532,7 @@ extern "C" {
   };
   typedef struct _iobuf FILE;
 # 84 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 3
-  typedef long _off_t;
+ typedef long _off_t;
 
   typedef long off_t;
 
@@ -382,9 +551,9 @@ extern "C" {
 
   __attribute__ ((__dllimport__)) FILE * __iob_func(void);
 # 120 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 3
-  __extension__ typedef long long fpos_t;
+ __extension__ typedef long long fpos_t;
 # 157 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 3
-  __attribute__ ((__dllimport__)) int _filbuf(FILE *_File);
+ __attribute__ ((__dllimport__)) int _filbuf(FILE *_File);
   __attribute__ ((__dllimport__)) int _flsbuf(int _Ch,FILE *_File);
 
 
@@ -530,7 +699,7 @@ extern "C" {
 
   int snprintf(char * __restrict__ s, size_t n, const char * __restrict__ format, ...);
 # 312 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 3
-  int vscanf(const char * __restrict__ Format, va_list argp);
+ int vscanf(const char * __restrict__ Format, va_list argp);
   int vfscanf (FILE * __restrict__ fp, const char * __restrict__ Format,va_list argp);
   int vsscanf (const char * __restrict__ _Str,const char * __restrict__ Format,va_list argp);
 
@@ -538,7 +707,7 @@ extern "C" {
   __attribute__ ((__dllimport__)) int _set_printf_count_output(int _Value);
   __attribute__ ((__dllimport__)) int _get_printf_count_output(void);
 # 330 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 3
-  __attribute__ ((__dllimport__)) FILE * _wfsopen(const wchar_t *_Filename,const wchar_t *_Mode,int _ShFlag);
+ __attribute__ ((__dllimport__)) FILE * _wfsopen(const wchar_t *_Filename,const wchar_t *_Mode,int _ShFlag);
 
 
   wint_t fgetwc(FILE *_File);
@@ -574,7 +743,7 @@ extern "C" {
   int snwprintf (wchar_t * __restrict__ s, size_t n, const wchar_t * __restrict__ format, ...);
   int vsnwprintf (wchar_t * __restrict__ , size_t, const wchar_t * __restrict__ , va_list);
 # 373 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 3
-  int vwscanf (const wchar_t * __restrict__ , va_list);
+ int vwscanf (const wchar_t * __restrict__ , va_list);
   int vfwscanf (FILE * __restrict__ ,const wchar_t * __restrict__ ,va_list);
   int vswscanf (const wchar_t * __restrict__ ,const wchar_t * __restrict__ ,va_list);
 
@@ -609,7 +778,7 @@ extern "C" {
   __attribute__ ((__dllimport__)) int _vswprintf_l(wchar_t * __restrict__ buffer,size_t count,const wchar_t * __restrict__ format,_locale_t locale,va_list argptr) ;
   __attribute__ ((__dllimport__)) int __vswprintf_l(wchar_t * __restrict__ _Dest,const wchar_t * __restrict__ _Format,_locale_t _Plocinfo,va_list _Args) ;
 # 417 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 3
-  __attribute__ ((__dllimport__)) wchar_t * _wtempnam(const wchar_t *_Directory,const wchar_t *_FilePrefix);
+ __attribute__ ((__dllimport__)) wchar_t * _wtempnam(const wchar_t *_Directory,const wchar_t *_FilePrefix);
   __attribute__ ((__dllimport__)) int _vscwprintf(const wchar_t * __restrict__ _Format,va_list _ArgList);
   __attribute__ ((__dllimport__)) int _vscwprintf_l(const wchar_t * __restrict__ _Format,_locale_t _Locale,va_list _ArgList);
   int fwscanf(FILE * __restrict__ _File,const wchar_t * __restrict__ _Format,...) ;
@@ -639,7 +808,7 @@ extern "C" {
   __attribute__ ((__dllimport__)) wint_t _fputwc_nolock(wchar_t _Ch,FILE *_File);
   __attribute__ ((__dllimport__)) wint_t _ungetwc_nolock(wint_t _Ch,FILE *_File);
 # 475 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 3
-  __attribute__ ((__dllimport__)) void _lock_file(FILE *_File);
+ __attribute__ ((__dllimport__)) void _lock_file(FILE *_File);
   __attribute__ ((__dllimport__)) void _unlock_file(FILE *_File);
   __attribute__ ((__dllimport__)) int _fclose_nolock(FILE *_File);
   __attribute__ ((__dllimport__)) int _fflush_nolock(FILE *_File);
@@ -674,6 +843,7 @@ extern "C" {
 #pragma pack(pop)
 
 
+
 # 1 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\sec_api/stdio_s.h" 1 3
 
 
@@ -690,18 +860,21 @@ extern "C" {
 
 # 1 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw_print_pop.h" 1 3
 # 511 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 2 3
-# 2 "VCNN_Update/src/custom/custom.h" 2
+# 2 "VCNN_Update/src/lib/../custom/custom.h" 2
 
 
 void return_callback(Layer layer);
 void neural_net(float mean_image[nChannels][imgHeight][imgWidth], int input_image[nChannels][imgHeight][imgWidth], float result[nOutput]);
-# 1 "VCNN_Update/src/custom/custom.cpp" 2
-
-# 1 "VCNN_Update/src/custom/../lib/util.h" 1
-# 2 "VCNN_Update/src/custom/custom.cpp" 2
+# 5 "VCNN_Update/src/lib/util.h" 2
 
 
+float* GET_INPUT_DATA(Layer l, int i, int j, int k, float *layerAddress);
+# 1 "VCNN_Update/src/lib/util.cpp" 2
 
-void return_callback(Layer layer){
 
+
+
+float* GET_INPUT_DATA(Layer l, int i, int j, int k, float *layerAddress) {
+# 37 "VCNN_Update/src/lib/util.cpp"
+ return (layerAddress + (i)*(l.input_feature_map_height*l.input_feature_map_width) + (j)*l.input_feature_map_width + (k));
 }

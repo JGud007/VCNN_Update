@@ -2,7 +2,7 @@
 // #include "../custom/caffe_model_layer.h"
 
 
-float* GET_INPUT_DATA(Layer l, int i, int j, int k) {
+float* GET_INPUT_DATA(Layer l, int i, int j, int k, float *layerAddress) {
 	// switch (l.id) { 
 	// 	case 0:
 	// 		return (l.layer0 + (i)*(l.input_feature_map_height*l.input_feature_map_width) + (j)*l.input_feature_map_width + (k));
@@ -33,5 +33,6 @@ float* GET_INPUT_DATA(Layer l, int i, int j, int k) {
 	// } 
 
 
-    return l.input_data + (i)*(l.input_feature_map_height*l.input_feature_map_width) + (j)*l.input_feature_map_width + (k);
+    // return l.input_data + (i)*(l.input_feature_map_height*l.input_feature_map_width) + (j)*l.input_feature_map_width + (k);
+    return (layerAddress + (i)*(l.input_feature_map_height*l.input_feature_map_width) + (j)*l.input_feature_map_width + (k));
 }

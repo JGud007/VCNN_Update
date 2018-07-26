@@ -1,5 +1,5 @@
-# 1 "VCNN_Update/src/custom/custom.cpp"
-# 1 "VCNN_Update/src/custom/custom.cpp" 1
+# 1 "VCNN_Update/src/lib/util.cpp"
+# 1 "VCNN_Update/src/lib/util.cpp" 1
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 152 "<built-in>" 3
@@ -145,9 +145,16 @@ extern "C" {
 }
 # 9 "<command line>" 2
 # 1 "<built-in>" 2
-# 1 "VCNN_Update/src/custom/custom.cpp" 2
-# 1 "VCNN_Update/src/custom/custom.h" 1
-# 1 "VCNN_Update/src/custom/caffe_model_layer.h" 1
+# 1 "VCNN_Update/src/lib/util.cpp" 2
+# 1 "VCNN_Update/src/lib/util.h" 1
+
+
+
+# 1 "VCNN_Update/src/lib/layers/layers.h" 1
+
+
+
+# 1 "VCNN_Update/src/lib/layers/../../custom/caffe_model_layer.h" 1
 
 
 static int const nLayers = 9;
@@ -158,7 +165,7 @@ typedef enum {CONVOLUTION,CONVOLUTION2,POOLING_MAX,RELU,INNERPRODUCT,INNERPRODUC
 typedef struct {
     int id;
     LayerType type;
-# 20 "VCNN_Update/src/custom/caffe_model_layer.h"
+# 20 "VCNN_Update/src/lib/layers/../../custom/caffe_model_layer.h"
     int conv_filter_channels;
     int conv_filter_size;
     int conv_filter_num;
@@ -176,8 +183,7 @@ typedef struct {
     int input_channel_num;
     int input_feature_map_height;
     int input_feature_map_width;
-
-    float* input_data;
+# 49 "VCNN_Update/src/lib/layers/../../custom/caffe_model_layer.h"
 } Layer;
 
 static int const nChannels = 1;
@@ -190,7 +196,22 @@ extern float mean_image[1][28][28];
 
 
 extern Layer layers[10];
-# 1 "VCNN_Update/src/custom/custom.h" 2
+# 4 "VCNN_Update/src/lib/layers/layers.h" 2
+
+
+using namespace std;
+
+
+void Convolution(Layer current, Layer next, float *layer0, float *layer1);
+void Convolution2(Layer current, Layer next, float *layer0, float *layer1);
+void PoolingMax(Layer current, Layer next, float *layer0, float *layer1);
+void Relu(Layer current, Layer next, float *layer0, float *layer1);
+void InnerProduct(Layer current, Layer next, float *layer0, float *layer1);
+void InnerProduct2(Layer current, Layer next, float *layer0, float *layer1);
+void Softmax(Layer current, Layer next, float *layer0, float *layer1);
+# 4 "VCNN_Update/src/lib/util.h" 2
+
+# 1 "VCNN_Update/src/lib/../custom/custom.h" 1
 
 # 1 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 1 3
 
@@ -690,18 +711,21 @@ extern "C" {
 
 # 1 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw_print_pop.h" 1 3
 # 511 "C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 2 3
-# 2 "VCNN_Update/src/custom/custom.h" 2
+# 2 "VCNN_Update/src/lib/../custom/custom.h" 2
 
 
 void return_callback(Layer layer);
 void neural_net(float mean_image[nChannels][imgHeight][imgWidth], int input_image[nChannels][imgHeight][imgWidth], float result[nOutput]);
-# 1 "VCNN_Update/src/custom/custom.cpp" 2
-
-# 1 "VCNN_Update/src/custom/../lib/util.h" 1
-# 2 "VCNN_Update/src/custom/custom.cpp" 2
+# 5 "VCNN_Update/src/lib/util.h" 2
 
 
+float* GET_INPUT_DATA(Layer l, int i, int j, int k, float *layerAddress);
+# 1 "VCNN_Update/src/lib/util.cpp" 2
 
-void return_callback(Layer layer){
 
+
+
+float* GET_INPUT_DATA(Layer l, int i, int j, int k, float *layerAddress) {
+# 37 "VCNN_Update/src/lib/util.cpp"
+    return (layerAddress + (i)*(l.input_feature_map_height*l.input_feature_map_width) + (j)*l.input_feature_map_width + (k));
 }
