@@ -2,7 +2,7 @@
     <includePaths/>
     <libraryPaths/>
     <Simulation>
-        <SimFlow askAgain="false" name="csim" csimMode="0" lastCsimMode="0"/>
+        <SimFlow name="csim" csimMode="0" lastCsimMode="0"/>
     </Simulation>
     <files xmlns="">
         <file name="../src/custom/mnist/mnist_data.h" sc="0" tb="1" cflags="  -Wno-unknown-pragmas"/>
@@ -25,8 +25,6 @@
         <file name="VCNN_Update/src/lib/layers/Softmax.cpp" sc="0" tb="false" cflags=""/>
     </files>
     <solutions xmlns="">
-        <solution name="solution1" status="active"/>
-        <solution name="solution1" status="active"/>
         <solution name="solution1" status="active"/>
     </solutions>
 </project>

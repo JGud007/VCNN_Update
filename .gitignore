@@ -89,8 +89,8 @@
 !*.c
 !*.h
 !*.cpp
-!.project
-!.cproject
+.project
+.cproject
 !README.md
 !.settings/*
 !.apc/*

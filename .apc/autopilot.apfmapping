@@ -19,7 +19,7 @@
     <originFiles name="util.h" path="C:\Users\niles\Downloads\Uni\PartIV\Code\MainRepo\VCNN_Update\src\lib\util.h"/>
   </source>
   <testbench>
-    <originFiles name="test.cpp" path="C:\Users\niles\Downloads\Uni\PartIV\Code\MainRepo\VCNN_Update\src\custom\test.cpp"/>
-    <originFiles name="mnist_data.h" path="C:\Users\niles\Downloads\Uni\PartIV\Code\MainRepo\VCNN_Update\src\custom\mnist\mnist_data.h"/>
+    <originFiles name="test.cpp" path="C:\VCNN_Update\src\custom\test.cpp"/>
+    <originFiles name="mnist_data.h" path="C:\VCNN_Update\src\custom\mnist\mnist_data.h"/>
   </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>
