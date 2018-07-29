@@ -82,6 +82,22 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
+					<fileInfo id="cdt.managedbuild.config.gnu.exe.debug.420509228.752199413" name="test.cpp" rcbsApplicability="disable" resourcePath="testbench/test.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.107147932.983919157">
+						<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.107147932.983919157" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.107147932">
+							<option id="gnu.cpp.compiler.option.preprocessor.def.1543987109" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def"/>
+							<option id="gnu.cpp.compiler.option.include.paths.1322303158" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
+								<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.1/win64/tools/auto_cc/include"/>
+								<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.1/include/ap_sysc"/>
+								<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.1/include/etc"/>
+								<listOptionValue builtIn="false" value="C:/"/>
+								<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.1/include"/>
+								<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.1/win64/tools/systemc/include"/>
+							</option>
+							<option id="gnu.cpp.compiler.option.other.other.2137652809" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-Wno-unknown-pragmas -c -fmessage-length=0" valueType="string"/>
+							<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1997089343" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+						</tool>
+					</fileInfo>
+					<fileInfo id="cdt.managedbuild.config.gnu.exe.debug.420509228.1212379775" name="mnist_data.h" rcbsApplicability="disable" resourcePath="testbench/mnist_data.h" toolsToInvoke=""/>
 					<sourceEntries>
 						<entry excluding="solution1|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
@@ -160,6 +176,22 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
+					<fileInfo id="cdt.managedbuild.config.gnu.exe.release.1667219504.34571928" name="test.cpp" rcbsApplicability="disable" resourcePath="testbench/test.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.1476653622.1752282945">
+						<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.1476653622.1752282945" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.1476653622">
+							<option id="gnu.cpp.compiler.option.preprocessor.def.868802531" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def"/>
+							<option id="gnu.cpp.compiler.option.include.paths.1187257895" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
+								<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.1/win64/tools/auto_cc/include"/>
+								<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.1/include/ap_sysc"/>
+								<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.1/include/etc"/>
+								<listOptionValue builtIn="false" value="C:/"/>
+								<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.1/include"/>
+								<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.1/win64/tools/systemc/include"/>
+							</option>
+							<option id="gnu.cpp.compiler.option.other.other.568494642" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-Wno-unknown-pragmas -c -fmessage-length=0" valueType="string"/>
+							<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1837915052" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+						</tool>
+					</fileInfo>
+					<fileInfo id="cdt.managedbuild.config.gnu.exe.release.1667219504.277146730" name="mnist_data.h" rcbsApplicability="disable" resourcePath="testbench/mnist_data.h" toolsToInvoke=""/>
 					<sourceEntries>
 						<entry excluding="solution1|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
@@ -171,20 +203,20 @@
 	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
 		<project id="VCNN.cdt.managedbuild.target.gnu.exe.967085443" name="Executable" projectType="cdt.managedbuild.target.gnu.exe"/>
 	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
 	<storageModule moduleId="scannerConfiguration">
 		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
-		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.exe.debug.420509228;cdt.managedbuild.config.gnu.exe.debug.420509228.;cdt.managedbuild.tool.gnu.c.compiler.exe.debug.1586704121;cdt.managedbuild.tool.gnu.c.compiler.input.167639701">
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.exe.debug.420509228;cdt.managedbuild.config.gnu.exe.debug.420509228.;cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.107147932;cdt.managedbuild.tool.gnu.cpp.compiler.input.325806192">
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 		</scannerConfigBuildInfo>
 		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.exe.release.1667219504;cdt.managedbuild.config.gnu.exe.release.1667219504.;cdt.managedbuild.tool.gnu.c.compiler.exe.release.860109190;cdt.managedbuild.tool.gnu.c.compiler.input.1423827337">
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 		</scannerConfigBuildInfo>
-		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.exe.debug.420509228;cdt.managedbuild.config.gnu.exe.debug.420509228.;cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.107147932;cdt.managedbuild.tool.gnu.cpp.compiler.input.325806192">
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.exe.debug.420509228;cdt.managedbuild.config.gnu.exe.debug.420509228.;cdt.managedbuild.tool.gnu.c.compiler.exe.debug.1586704121;cdt.managedbuild.tool.gnu.c.compiler.input.167639701">
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 		</scannerConfigBuildInfo>
 		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.exe.release.1667219504;cdt.managedbuild.config.gnu.exe.release.1667219504.;cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.1476653622;cdt.managedbuild.tool.gnu.cpp.compiler.input.586029565">
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 		</scannerConfigBuildInfo>
 	</storageModule>
-	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
 </cproject>

@@ -7,6 +7,7 @@
 // }
 
 void Relu(Layer current, Layer next, float *layer0, float *layer1){
+	#pragma HLS loop_merge
 
 	int inputs = current.input_channel_num;
 	int height = current.input_feature_map_height;
@@ -16,6 +17,7 @@ void Relu(Layer current, Layer next, float *layer0, float *layer1){
 	for(i=0;i<inputs;i++){
 		for(h=0; h<height;h++){
 			for(w=0;w<width;w++){
+				#pragma HLS loop_flatten
 				float data = *(GET_INPUT_DATA(current,i,h,w,layer0));
 				if(data < 0){
 					data = 0;

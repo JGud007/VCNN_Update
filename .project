@@ -47,9 +47,14 @@
 			<location>C:/VCNN_Update/src/lib/layers/Softmax.cpp</location>
 		</link>
 		<link>
-			<name>source/VCNN.h</name>
+			<name>source/caffe_model_layer.cpp</name>
 			<type>1</type>
-			<location>C:/VCNN_Update/src/VCNN.h</location>
+			<location>C:/VCNN_Update/src/custom/caffe_model_layer.cpp</location>
+		</link>
+		<link>
+			<name>source/caffe_model_layer.h</name>
+			<type>1</type>
+			<location>C:/VCNN_Update/src/custom/caffe_model_layer.h</location>
 		</link>
 		<link>
 			<name>source/convolution.cpp</name>
@@ -60,11 +65,6 @@
 			<name>source/convolution2.cpp</name>
 			<type>1</type>
 			<location>C:/VCNN_Update/src/lib/layers/convolution2.cpp</location>
-		</link>
-		<link>
-			<name>source/custom.cpp</name>
-			<type>1</type>
-			<location>C:/VCNN_Update/src/custom/custom.cpp</location>
 		</link>
 		<link>
 			<name>source/custom.h</name>
@@ -100,11 +100,6 @@
 			<name>source/relu.cpp</name>
 			<type>1</type>
 			<location>C:/VCNN_Update/src/lib/layers/relu.cpp</location>
-		</link>
-		<link>
-			<name>source/return_callback.cpp</name>
-			<type>1</type>
-			<location>C:/VCNN_Update/src/lib/layers/return_callback.cpp</location>
 		</link>
 		<link>
 			<name>source/util.cpp</name>
