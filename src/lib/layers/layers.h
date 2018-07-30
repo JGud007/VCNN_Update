@@ -3,9 +3,6 @@
 
 #include "../../custom/caffe_model_layer.h"
 
-using namespace std;
-
-
 void Convolution(Layer current, Layer next, float *layer0, float *layer1);
 void Convolution2(Layer current, Layer next, float *layer0, float *layer1);
 void PoolingMax(Layer current, Layer next, float *layer0, float *layer1);
@@ -13,7 +10,5 @@ void Relu(Layer current, Layer next, float *layer0, float *layer1);
 void InnerProduct(Layer current, Layer next, float *layer0, float *layer1);
 void InnerProduct2(Layer current, Layer next, float *layer0, float *layer1);
 void Softmax(Layer current, Layer next, float *layer0, float *layer1);
-// void ReturnCallback(Layer current, Layer next, float *layer0, float *layer1);
-
 
 #endif

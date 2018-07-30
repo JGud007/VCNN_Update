@@ -179,7 +179,7 @@ typedef struct {
     int input_channel_num;
     int input_feature_map_height;
     int input_feature_map_width;
-# 49 "VCNN_Update/src/lib/layers/../../custom/caffe_model_layer.h"
+
 } Layer;
 
 static int const nChannels = 1;
@@ -192,11 +192,7 @@ extern float mean_image[1][28][28];
 
 
 extern Layer layers[10];
-# 4 "VCNN_Update/src/lib/layers/layers.h" 2
-
-
-using namespace std;
-
+# 5 "VCNN_Update/src/lib/layers/layers.h" 2
 
 void Convolution(Layer current, Layer next, float *layer0, float *layer1);
 void Convolution2(Layer current, Layer next, float *layer0, float *layer1);
@@ -714,8 +710,7 @@ extern "C" {
 # 3 "VCNN_Update/src/lib/layers/../../custom/custom.h" 2
 
 void neural_net(float mean_image[nChannels][imgHeight][imgWidth], int input_image[nChannels][imgHeight][imgWidth], float result[nOutput]);
-# 5 "VCNN_Update/src/lib/layers/../util.h" 2
-
+# 6 "VCNN_Update/src/lib/layers/../util.h" 2
 
 float* GET_INPUT_DATA(Layer l, int i, int j, int k, float *layerAddress);
 # 3 "VCNN_Update/src/lib/layers/pooling.cpp" 2
@@ -727,8 +722,8 @@ void neural_net(float mean_image[nChannels][imgHeight][imgWidth], int input_imag
 # 4 "VCNN_Update/src/lib/layers/pooling.cpp" 2
 
 inline float max(Layer current, int ksize, int channel, int h, int w, float *layer0){
+#pragma HLS unroll
  float r = -(1e99);
-
  int karea = ksize*ksize;
  for (int i = 0; i < ksize; i++)
   for (int j = 0; j < ksize; j++)
@@ -740,24 +735,19 @@ inline float max(Layer current, int ksize, int channel, int h, int w, float *lay
 }
 
 void PoolingMax(Layer current, Layer next, float* layer0, float* layer1){
+#pragma HLS unroll
  int ksize = current.pl_kernel_size;
  int stride = current.pl_stride;
  int channels = current.input_channel_num;
-
  int height = current.input_feature_map_height-stride+1;
  int width = current.input_feature_map_width-stride+1;
-
  float output[2880] = {0};
 
- for (int c = 0; c < channels; c++)
-  for(int h = 0, hc = 0; h < height; h+=stride, hc++)
-   for(int w = 0, wc = 0; w < width; w+=stride, wc++)
-    {
-
-
+ for (int c = 0; c < channels; c++){
+  for(int h = 0, hc = 0; h < height; h+=stride, hc++){
+   for(int w = 0, wc = 0; w < width; w+=stride, wc++){
     *(GET_INPUT_DATA(next,c,hc,wc,layer1)) = max(current, ksize, c, h, w, layer0);
-
-    }
-
-
+   }
+  }
+ }
 }

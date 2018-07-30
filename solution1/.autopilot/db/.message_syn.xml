@@ -1,73 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Messages>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1312" content="Analyzing design file &apos;VCNN_Update/src/lib/util.cpp&apos; ..." tag=""/>
-	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1378" content="In file included from VCNN_Update/src/lib/util.cpp:1:
-In file included from VCNN_Update/src/lib/util.cpp:1:
-In file included from VCNN_Update/src/lib/util.h:4:
-VCNN_Update/src/lib/layers/layers.h:6:17: warning: using directive refers to implicitly-defined namespace &apos;std&apos;
-using namespace std;
-                ^
-1 warning generated." tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1312" content="Analyzing design file &apos;VCNN_Update/src/lib/layers/relu.cpp&apos; ..." tag=""/>
-	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1378" content="In file included from VCNN_Update/src/lib/layers/relu.cpp:1:
-In file included from VCNN_Update/src/lib/layers/relu.cpp:1:
-VCNN_Update/src/lib/layers/layers.h:6:17: warning: using directive refers to implicitly-defined namespace &apos;std&apos;
-using namespace std;
-                ^
-1 warning generated." tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1312" content="Analyzing design file &apos;VCNN_Update/src/lib/layers/pooling.cpp&apos; ..." tag=""/>
-	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1378" content="In file included from VCNN_Update/src/lib/layers/pooling.cpp:1:
-In file included from VCNN_Update/src/lib/layers/pooling.cpp:1:
-VCNN_Update/src/lib/layers/layers.h:6:17: warning: using directive refers to implicitly-defined namespace &apos;std&apos;
-using namespace std;
-                ^
-1 warning generated." tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1312" content="Analyzing design file &apos;VCNN_Update/src/lib/main.cpp&apos; ..." tag=""/>
-	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1378" content="In file included from VCNN_Update/src/lib/main.cpp:1:
-In file included from VCNN_Update/src/lib/main.cpp:1:
-VCNN_Update/src/lib/./layers/layers.h:6:17: warning: using directive refers to implicitly-defined namespace &apos;std&apos;
-using namespace std;
-                ^
-1 warning generated." tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1312" content="Analyzing design file &apos;VCNN_Update/src/lib/layers/inner_product2.cpp&apos; ..." tag=""/>
-	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1378" content="In file included from VCNN_Update/src/lib/layers/inner_product2.cpp:1:
-In file included from VCNN_Update/src/lib/layers/inner_product2.cpp:1:
-VCNN_Update/src/lib/layers/layers.h:6:17: warning: using directive refers to implicitly-defined namespace &apos;std&apos;
-using namespace std;
-                ^
-1 warning generated." tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1312" content="Analyzing design file &apos;VCNN_Update/src/lib/layers/inner_product.cpp&apos; ..." tag=""/>
-	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1378" content="In file included from VCNN_Update/src/lib/layers/inner_product.cpp:1:
-In file included from VCNN_Update/src/lib/layers/inner_product.cpp:1:
-VCNN_Update/src/lib/layers/layers.h:6:17: warning: using directive refers to implicitly-defined namespace &apos;std&apos;
-using namespace std;
-                ^
-1 warning generated." tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1312" content="Analyzing design file &apos;VCNN_Update/src/lib/layers/convolution2.cpp&apos; ..." tag=""/>
-	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1378" content="In file included from VCNN_Update/src/lib/layers/convolution2.cpp:1:
-In file included from VCNN_Update/src/lib/layers/convolution2.cpp:1:
-VCNN_Update/src/lib/layers/layers.h:6:17: warning: using directive refers to implicitly-defined namespace &apos;std&apos;
-using namespace std;
-                ^
-1 warning generated." tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1312" content="Analyzing design file &apos;VCNN_Update/src/lib/layers/convolution.cpp&apos; ..." tag=""/>
-	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1378" content="In file included from VCNN_Update/src/lib/layers/convolution.cpp:1:
-In file included from VCNN_Update/src/lib/layers/convolution.cpp:1:
-VCNN_Update/src/lib/layers/layers.h:6:17: warning: using directive refers to implicitly-defined namespace &apos;std&apos;
-using namespace std;
-                ^
-1 warning generated." tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1312" content="Analyzing design file &apos;VCNN_Update/src/custom/caffe_model_layer.cpp&apos; ..." tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1312" content="Analyzing design file &apos;VCNN_Update/src/lib/layers/Softmax.cpp&apos; ..." tag=""/>
-	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1378" content="In file included from VCNN_Update/src/lib/layers/Softmax.cpp:1:
-In file included from VCNN_Update/src/lib/layers/Softmax.cpp:1:
-VCNN_Update/src/lib/layers/layers.h:6:17: warning: using directive refers to implicitly-defined namespace &apos;std&apos;
-using namespace std;
-                ^
-1 warning generated." tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1465" content="Validating synthesis directives ..." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:01:08 . Memory (MB): peak = 140.848 ; gain = 83.520" tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:01:14 . Memory (MB): peak = 140.848 ; gain = 83.520" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Pragmas Time (s): cpu = 00:00:03 ; elapsed = 00:01:20 . Memory (MB): peak = 141.273 ; gain = 83.656" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Linking Time (s): cpu = 00:00:03 ; elapsed = 00:01:25 . Memory (MB): peak = 141.273 ; gain = 83.656" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1467" content="Starting code transformations ..." tag=""/>
 	<Message prefix="[XFORM 203-603]" severity="INFO" keynum="792" content="Inlining function &apos;GET_INPUT_DATA&apos; into &apos;conv3d1&apos; (VCNN_Update/src/lib/layers/convolution.cpp:21)." tag=""/>
 	<Message prefix="[XFORM 203-603]" severity="INFO" keynum="792" content="Inlining function &apos;GET_INPUT_DATA&apos; into &apos;Convolution&apos; (VCNN_Update/src/lib/layers/convolution.cpp:46)." tag=""/>
@@ -75,30 +20,32 @@ using namespace std;
 	<Message prefix="[XFORM 203-603]" severity="INFO" keynum="792" content="Inlining function &apos;GET_INPUT_DATA&apos; into &apos;Convolution2&apos; (VCNN_Update/src/lib/layers/convolution2.cpp:47)." tag=""/>
 	<Message prefix="[XFORM 203-603]" severity="INFO" keynum="792" content="Inlining function &apos;GET_INPUT_DATA&apos; into &apos;neural_net&apos; (VCNN_Update/src/lib/main.cpp:24)." tag=""/>
 	<Message prefix="[XFORM 203-603]" severity="INFO" keynum="792" content="Inlining function &apos;GET_INPUT_DATA&apos; into &apos;max&apos; (VCNN_Update/src/lib/layers/pooling.cpp:12)." tag=""/>
-	<Message prefix="[XFORM 203-603]" severity="INFO" keynum="792" content="Inlining function &apos;GET_INPUT_DATA&apos; into &apos;PoolingMax&apos; (VCNN_Update/src/lib/layers/pooling.cpp:34)." tag=""/>
-	<Message prefix="[XFORM 203-603]" severity="INFO" keynum="792" content="Inlining function &apos;GET_INPUT_DATA&apos; into &apos;Relu&apos; (VCNN_Update/src/lib/layers/relu.cpp:25)." tag=""/>
-	<Message prefix="[XFORM 203-603]" severity="INFO" keynum="792" content="Inlining function &apos;GET_INPUT_DATA&apos; into &apos;Relu&apos; (VCNN_Update/src/lib/layers/relu.cpp:21)." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Standard Transforms Time (s): cpu = 00:00:03 ; elapsed = 00:01:18 . Memory (MB): peak = 140.848 ; gain = 83.520" tag=""/>
+	<Message prefix="[XFORM 203-603]" severity="INFO" keynum="792" content="Inlining function &apos;GET_INPUT_DATA&apos; into &apos;PoolingMax&apos; (VCNN_Update/src/lib/layers/pooling.cpp:30)." tag=""/>
+	<Message prefix="[XFORM 203-603]" severity="INFO" keynum="792" content="Inlining function &apos;GET_INPUT_DATA&apos; into &apos;Relu&apos; (VCNN_Update/src/lib/layers/relu.cpp:24)." tag=""/>
+	<Message prefix="[XFORM 203-603]" severity="INFO" keynum="792" content="Inlining function &apos;GET_INPUT_DATA&apos; into &apos;Relu&apos; (VCNN_Update/src/lib/layers/relu.cpp:20)." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Standard Transforms Time (s): cpu = 00:00:04 ; elapsed = 00:01:29 . Memory (MB): peak = 141.273 ; gain = 83.656" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1472" content="Checking synthesizability ..." tag=""/>
-	<Message prefix="[XFORM 203-602]" severity="INFO" keynum="794" content="Inlining function &apos;max&apos; into &apos;PoolingMax.1&apos; (VCNN_Update/src/lib/layers/pooling.cpp:34) automatically." tag=""/>
-	<Message prefix="[XFORM 203-602]" severity="INFO" keynum="794" content="Inlining function &apos;max.1&apos; into &apos;PoolingMax&apos; (VCNN_Update/src/lib/layers/pooling.cpp:34) automatically." tag=""/>
+	<Message prefix="[XFORM 203-602]" severity="INFO" keynum="794" content="Inlining function &apos;max&apos; into &apos;PoolingMax.1&apos; (VCNN_Update/src/lib/layers/pooling.cpp:30) automatically." tag=""/>
+	<Message prefix="[XFORM 203-602]" severity="INFO" keynum="794" content="Inlining function &apos;max.1&apos; into &apos;PoolingMax&apos; (VCNN_Update/src/lib/layers/pooling.cpp:30) automatically." tag=""/>
 	<Message prefix="[XFORM 203-602]" severity="INFO" keynum="794" content="Inlining function &apos;InnerProduct&apos; into &apos;neural_net&apos; (VCNN_Update/src/lib/main.cpp:31) automatically." tag=""/>
 	<Message prefix="[XFORM 203-602]" severity="INFO" keynum="794" content="Inlining function &apos;InnerProduct2&apos; into &apos;neural_net&apos; (VCNN_Update/src/lib/main.cpp:33) automatically." tag=""/>
 	<Message prefix="[XFORM 203-602]" severity="INFO" keynum="794" content="Inlining function &apos;Softmax&apos; into &apos;neural_net&apos; (VCNN_Update/src/lib/main.cpp:34) automatically." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Synthesizability Time (s): cpu = 00:00:05 ; elapsed = 00:01:20 . Memory (MB): peak = 143.320 ; gain = 85.992" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Synthesizability Time (s): cpu = 00:00:06 ; elapsed = 00:01:31 . Memory (MB): peak = 142.074 ; gain = 84.457" tag=""/>
 	<Message prefix="[XFORM 203-502]" severity="INFO" keynum="812" content="Unrolling small iteration loop &apos;Loop-9&apos; (VCNN_Update/src/lib/main.cpp:20) in function &apos;neural_net&apos; automatically." tag=""/>
 	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Loop-9&apos; (VCNN_Update/src/lib/main.cpp:20) in function &apos;neural_net&apos; completely." tag=""/>
-	<Message prefix="[XFORM 203-602]" severity="INFO" keynum="794" content="Inlining function &apos;max&apos; into &apos;PoolingMax.1&apos; (VCNN_Update/src/lib/layers/pooling.cpp:34) automatically." tag=""/>
-	<Message prefix="[XFORM 203-602]" severity="INFO" keynum="794" content="Inlining function &apos;max.1&apos; into &apos;PoolingMax&apos; (VCNN_Update/src/lib/layers/pooling.cpp:34) automatically." tag=""/>
+	<Message prefix="[XFORM 203-602]" severity="INFO" keynum="794" content="Inlining function &apos;max&apos; into &apos;PoolingMax.1&apos; (VCNN_Update/src/lib/layers/pooling.cpp:30) automatically." tag=""/>
+	<Message prefix="[XFORM 203-602]" severity="INFO" keynum="794" content="Inlining function &apos;max.1&apos; into &apos;PoolingMax&apos; (VCNN_Update/src/lib/layers/pooling.cpp:30) automatically." tag=""/>
 	<Message prefix="[XFORM 203-602]" severity="INFO" keynum="794" content="Inlining function &apos;InnerProduct&apos; into &apos;neural_net&apos; (VCNN_Update/src/lib/main.cpp:31) automatically." tag=""/>
 	<Message prefix="[XFORM 203-602]" severity="INFO" keynum="794" content="Inlining function &apos;Relu&apos; into &apos;neural_net&apos; (VCNN_Update/src/lib/main.cpp:32) automatically." tag=""/>
 	<Message prefix="[XFORM 203-602]" severity="INFO" keynum="794" content="Inlining function &apos;InnerProduct2&apos; into &apos;neural_net&apos; (VCNN_Update/src/lib/main.cpp:33) automatically." tag=""/>
 	<Message prefix="[XFORM 203-602]" severity="INFO" keynum="794" content="Inlining function &apos;Softmax&apos; into &apos;neural_net&apos; (VCNN_Update/src/lib/main.cpp:34) automatically." tag=""/>
 	<Message prefix="[XFORM 203-11]" severity="INFO" keynum="754" content="Balancing expressions in function &apos;conv3d2&apos; (VCNN_Update/src/lib/layers/convolution2.cpp:8)...7 expression(s) balanced." tag=""/>
 	<Message prefix="[XFORM 203-11]" severity="INFO" keynum="754" content="Balancing expressions in function &apos;conv3d1&apos; (VCNN_Update/src/lib/layers/convolution.cpp:9)...7 expression(s) balanced." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Pre-synthesis Time (s): cpu = 00:00:07 ; elapsed = 00:01:26 . Memory (MB): peak = 164.938 ; gain = 107.609" tag=""/>
-	<Message prefix="[XFORM 203-541]" severity="INFO" keynum="789" content="Flattening a loop nest &apos;Loop-5.1&apos; (VCNN_Update/src/lib/layers/relu.cpp:18:7) in function &apos;neural_net&apos;." tag=""/>
-	<Message prefix="[XFORM 203-541]" severity="INFO" keynum="789" content="Flattening a loop nest &apos;Loop-5&apos; (VCNN_Update/src/lib/layers/relu.cpp:17:6) in function &apos;neural_net&apos;." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Pre-synthesis Time (s): cpu = 00:00:09 ; elapsed = 00:01:41 . Memory (MB): peak = 163.188 ; gain = 105.570" tag=""/>
+	<Message prefix="[XFORM 203-541]" severity="INFO" keynum="789" content="Flattening a loop nest &apos;Loop-4&apos; (VCNN_Update/src/lib/layers/inner_product.cpp:14:13) in function &apos;neural_net&apos;." tag=""/>
+	<Message prefix="[XFORM 203-541]" severity="INFO" keynum="789" content="Flattening a loop nest &apos;Loop-5.1&apos; (VCNN_Update/src/lib/layers/relu.cpp:17:7) in function &apos;neural_net&apos;." tag=""/>
+	<Message prefix="[XFORM 203-541]" severity="INFO" keynum="789" content="Flattening a loop nest &apos;Loop-5&apos; (VCNN_Update/src/lib/layers/relu.cpp:16:6) in function &apos;neural_net&apos;." tag=""/>
+	<Message prefix="[XFORM 203-541]" severity="INFO" keynum="789" content="Flattening a loop nest &apos;Loop-6&apos; (VCNN_Update/src/lib/layers/inner_product2.cpp:14:13) in function &apos;neural_net&apos;." tag=""/>
 	<Message prefix="[XFORM 203-541]" severity="INFO" keynum="789" content="Flattening a loop nest &apos;Loop-1.1&apos; (VCNN_Update/src/lib/layers/convolution2.cpp:15:23) in function &apos;conv3d2&apos;." tag=""/>
 	<Message prefix="[XFORM 203-541]" severity="INFO" keynum="789" content="Flattening a loop nest &apos;Loop-1&apos; (VCNN_Update/src/lib/layers/convolution2.cpp:14:16) in function &apos;conv3d2&apos;." tag=""/>
 	<Message prefix="[XFORM 203-541]" severity="INFO" keynum="789" content="Flattening a loop nest &apos;Loop-1.1&apos; (VCNN_Update/src/lib/layers/convolution.cpp:16:23) in function &apos;conv3d1&apos;." tag=""/>
@@ -107,7 +54,7 @@ using namespace std;
 	<Message prefix="[XFORM 203-541]" severity="INFO" keynum="789" content="Flattening a loop nest &apos;Loop-1&apos; (VCNN_Update/src/lib/layers/convolution2.cpp:42:17) in function &apos;Convolution2&apos;." tag=""/>
 	<Message prefix="[XFORM 203-541]" severity="INFO" keynum="789" content="Flattening a loop nest &apos;Loop-1.1&apos; (VCNN_Update/src/lib/layers/convolution.cpp:42:33) in function &apos;Convolution&apos;." tag=""/>
 	<Message prefix="[XFORM 203-541]" severity="INFO" keynum="789" content="Flattening a loop nest &apos;Loop-1&apos; (VCNN_Update/src/lib/layers/convolution.cpp:41:17) in function &apos;Convolution&apos;." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Architecture Synthesis Time (s): cpu = 00:25:20 ; elapsed = 00:26:53 . Memory (MB): peak = 220.582 ; gain = 163.254" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Architecture Synthesis Time (s): cpu = 00:00:22 ; elapsed = 00:01:56 . Memory (MB): peak = 219.746 ; gain = 162.129" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1317" content="Starting hardware synthesis ..." tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1385" content="Synthesizing &apos;neural_net&apos; ..." tag=""/>
 	<Message prefix="[SYN 201-103]" severity="WARNING" keynum="534" content="Legalizing function name &apos;PoolingMax.1&apos; to &apos;PoolingMax_1&apos;." tag=""/>
@@ -116,85 +63,85 @@ using namespace std;
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
 	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="139" content="Starting scheduling ..." tag=""/>
 	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="138" content="Finished scheduling." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 1613.46 seconds; current allocated memory: 160.458 MB." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 116.71 seconds; current allocated memory: 159.910 MB." tag=""/>
 	<Message prefix="[BIND 205-100]" severity="INFO" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
 	<Message prefix="[BIND 205-101]" severity="INFO" keynum="211" content="Performing variable lifetime analysis." tag=""/>
 	<Message prefix="[BIND 205-101]" severity="INFO" keynum="210" content="Exploring resource sharing." tag=""/>
 	<Message prefix="[BIND 205-101]" severity="INFO" keynum="206" content="Binding ..." tag=""/>
 	<Message prefix="[BIND 205-100]" severity="INFO" keynum="438" content="Finished micro-architecture generation." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.242 seconds; current allocated memory: 160.767 MB." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.201 seconds; current allocated memory: 160.219 MB." tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
 	<Message prefix="[HLS 200-42]" severity="INFO" keynum="HLS_42_1438" content="-- Implementing module &apos;Convolution&apos;" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
 	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="139" content="Starting scheduling ..." tag=""/>
 	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="138" content="Finished scheduling." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.283 seconds; current allocated memory: 161.070 MB." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.295 seconds; current allocated memory: 160.522 MB." tag=""/>
 	<Message prefix="[BIND 205-100]" severity="INFO" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
 	<Message prefix="[BIND 205-101]" severity="INFO" keynum="211" content="Performing variable lifetime analysis." tag=""/>
 	<Message prefix="[BIND 205-101]" severity="INFO" keynum="210" content="Exploring resource sharing." tag=""/>
 	<Message prefix="[BIND 205-101]" severity="INFO" keynum="206" content="Binding ..." tag=""/>
 	<Message prefix="[BIND 205-100]" severity="INFO" keynum="438" content="Finished micro-architecture generation." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.201 seconds; current allocated memory: 161.310 MB." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.216 seconds; current allocated memory: 160.778 MB." tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
 	<Message prefix="[HLS 200-42]" severity="INFO" keynum="HLS_42_1438" content="-- Implementing module &apos;PoolingMax_1&apos;" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
 	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="139" content="Starting scheduling ..." tag=""/>
 	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="138" content="Finished scheduling." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.323 seconds; current allocated memory: 161.682 MB." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.387 seconds; current allocated memory: 161.134 MB." tag=""/>
 	<Message prefix="[BIND 205-100]" severity="INFO" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
 	<Message prefix="[BIND 205-101]" severity="INFO" keynum="211" content="Performing variable lifetime analysis." tag=""/>
 	<Message prefix="[BIND 205-101]" severity="INFO" keynum="210" content="Exploring resource sharing." tag=""/>
 	<Message prefix="[BIND 205-101]" severity="INFO" keynum="206" content="Binding ..." tag=""/>
 	<Message prefix="[BIND 205-100]" severity="INFO" keynum="438" content="Finished micro-architecture generation." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.352 seconds; current allocated memory: 161.976 MB." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.198 seconds; current allocated memory: 161.428 MB." tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
 	<Message prefix="[HLS 200-42]" severity="INFO" keynum="HLS_42_1438" content="-- Implementing module &apos;conv3d2&apos;" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
 	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="139" content="Starting scheduling ..." tag=""/>
 	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="138" content="Finished scheduling." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.324 seconds; current allocated memory: 162.270 MB." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.322 seconds; current allocated memory: 161.722 MB." tag=""/>
 	<Message prefix="[BIND 205-100]" severity="INFO" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
 	<Message prefix="[BIND 205-101]" severity="INFO" keynum="211" content="Performing variable lifetime analysis." tag=""/>
 	<Message prefix="[BIND 205-101]" severity="INFO" keynum="210" content="Exploring resource sharing." tag=""/>
 	<Message prefix="[BIND 205-101]" severity="INFO" keynum="206" content="Binding ..." tag=""/>
 	<Message prefix="[BIND 205-100]" severity="INFO" keynum="438" content="Finished micro-architecture generation." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.227 seconds; current allocated memory: 162.594 MB." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.229 seconds; current allocated memory: 162.046 MB." tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
 	<Message prefix="[HLS 200-42]" severity="INFO" keynum="HLS_42_1438" content="-- Implementing module &apos;Convolution2&apos;" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
 	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="139" content="Starting scheduling ..." tag=""/>
 	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="138" content="Finished scheduling." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.277 seconds; current allocated memory: 162.786 MB." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.299 seconds; current allocated memory: 162.231 MB." tag=""/>
 	<Message prefix="[BIND 205-100]" severity="INFO" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
 	<Message prefix="[BIND 205-101]" severity="INFO" keynum="211" content="Performing variable lifetime analysis." tag=""/>
 	<Message prefix="[BIND 205-101]" severity="INFO" keynum="210" content="Exploring resource sharing." tag=""/>
 	<Message prefix="[BIND 205-101]" severity="INFO" keynum="206" content="Binding ..." tag=""/>
 	<Message prefix="[BIND 205-100]" severity="INFO" keynum="438" content="Finished micro-architecture generation." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.203 seconds; current allocated memory: 163.022 MB." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.208 seconds; current allocated memory: 162.467 MB." tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
 	<Message prefix="[HLS 200-42]" severity="INFO" keynum="HLS_42_1438" content="-- Implementing module &apos;PoolingMax&apos;" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
 	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="139" content="Starting scheduling ..." tag=""/>
 	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="138" content="Finished scheduling." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.293 seconds; current allocated memory: 163.304 MB." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.32 seconds; current allocated memory: 162.749 MB." tag=""/>
 	<Message prefix="[BIND 205-100]" severity="INFO" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
 	<Message prefix="[BIND 205-101]" severity="INFO" keynum="211" content="Performing variable lifetime analysis." tag=""/>
 	<Message prefix="[BIND 205-101]" severity="INFO" keynum="210" content="Exploring resource sharing." tag=""/>
 	<Message prefix="[BIND 205-101]" severity="INFO" keynum="206" content="Binding ..." tag=""/>
 	<Message prefix="[BIND 205-100]" severity="INFO" keynum="438" content="Finished micro-architecture generation." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.183 seconds; current allocated memory: 163.534 MB." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.202 seconds; current allocated memory: 162.979 MB." tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
 	<Message prefix="[HLS 200-42]" severity="INFO" keynum="HLS_42_1438" content="-- Implementing module &apos;neural_net&apos;" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
 	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="139" content="Starting scheduling ..." tag=""/>
 	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="138" content="Finished scheduling." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.37 seconds; current allocated memory: 164.461 MB." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.456 seconds; current allocated memory: 163.945 MB." tag=""/>
 	<Message prefix="[BIND 205-100]" severity="INFO" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
 	<Message prefix="[BIND 205-101]" severity="INFO" keynum="211" content="Performing variable lifetime analysis." tag=""/>
 	<Message prefix="[BIND 205-101]" severity="INFO" keynum="210" content="Exploring resource sharing." tag=""/>
 	<Message prefix="[BIND 205-101]" severity="INFO" keynum="206" content="Binding ..." tag=""/>
 	<Message prefix="[BIND 205-100]" severity="INFO" keynum="438" content="Finished micro-architecture generation." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.747 seconds; current allocated memory: 165.597 MB." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.875 seconds; current allocated memory: 165.096 MB." tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;conv3d1&apos;" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
@@ -204,21 +151,21 @@ using namespace std;
 	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;neural_net_fadd_3cud&apos;: 1 instance(s)." tag=""/>
 	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;neural_net_fmul_3dEe&apos;: 1 instance(s)." tag=""/>
 	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="369" content="Finished creating RTL model for &apos;conv3d1&apos;." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.936 seconds; current allocated memory: 166.496 MB." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.961 seconds; current allocated memory: 166.000 MB." tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;Convolution&apos;" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
 	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;Convolution_conv_bias&apos; to &apos;Convolution_conv_eOg&apos; due to the length limit 20" tag=""/>
 	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;neural_net_fadd_3cud&apos;: 1 instance(s)." tag=""/>
 	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="369" content="Finished creating RTL model for &apos;Convolution&apos;." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.582 seconds; current allocated memory: 167.243 MB." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.625 seconds; current allocated memory: 166.748 MB." tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;PoolingMax_1&apos;" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
 	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;neural_net_fcmp_32ns_32ns_1_1_1&apos; to &apos;neural_net_fcmp_3fYi&apos; due to the length limit 20" tag=""/>
 	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;neural_net_fcmp_3fYi&apos;: 1 instance(s)." tag=""/>
 	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="369" content="Finished creating RTL model for &apos;PoolingMax_1&apos;." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.587 seconds; current allocated memory: 167.929 MB." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.761 seconds; current allocated memory: 167.434 MB." tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;conv3d2&apos;" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
@@ -226,20 +173,20 @@ using namespace std;
 	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;neural_net_fadd_3cud&apos;: 1 instance(s)." tag=""/>
 	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;neural_net_fmul_3dEe&apos;: 1 instance(s)." tag=""/>
 	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="369" content="Finished creating RTL model for &apos;conv3d2&apos;." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.742 seconds; current allocated memory: 172.401 MB." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.845 seconds; current allocated memory: 172.266 MB." tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;Convolution2&apos;" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
 	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;Convolution2_conv_bias2&apos; to &apos;Convolution2_convhbi&apos; due to the length limit 20" tag=""/>
 	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;neural_net_fadd_3cud&apos;: 1 instance(s)." tag=""/>
 	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="369" content="Finished creating RTL model for &apos;Convolution2&apos;." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.675 seconds; current allocated memory: 173.037 MB." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.882 seconds; current allocated memory: 172.917 MB." tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;PoolingMax&apos;" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
 	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;neural_net_fcmp_3fYi&apos;: 1 instance(s)." tag=""/>
 	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="369" content="Finished creating RTL model for &apos;PoolingMax&apos;." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.645 seconds; current allocated memory: 173.619 MB." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.642 seconds; current allocated memory: 173.483 MB." tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;neural_net&apos;" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
@@ -251,18 +198,20 @@ using namespace std;
 	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="375" content="Global array &apos;conv_filter_weight&apos; will not be exposed as RTL port." tag=""/>
 	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="375" content="Global array &apos;conv_bias2&apos; will not be exposed as RTL port." tag=""/>
 	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="375" content="Global array &apos;conv_filter_weight2&apos; will not be exposed as RTL port." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="375" content="Global array &apos;ip_bias&apos; will not be exposed as RTL port." tag=""/>
 	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="375" content="Global array &apos;ip_weight&apos; will not be exposed as RTL port." tag=""/>
 	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;neural_net_ip_weight&apos; to &apos;neural_net_ip_weiibs&apos; due to the length limit 20" tag=""/>
-	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="375" content="Global array &apos;ip_bias&apos; will not be exposed as RTL port." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="375" content="Global array &apos;ip_bias2&apos; will not be exposed as RTL port." tag=""/>
 	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="375" content="Global array &apos;ip_weight2&apos; will not be exposed as RTL port." tag=""/>
 	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;neural_net_ip_weight2&apos; to &apos;neural_net_ip_weijbC&apos; due to the length limit 20" tag=""/>
-	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="375" content="Global array &apos;ip_bias2&apos; will not be exposed as RTL port." tag=""/>
 	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;neural_net_faddfsub_32ns_32ns_32_4_full_dsp_1&apos; to &apos;neural_net_faddfskbM&apos; due to the length limit 20" tag=""/>
 	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;neural_net_fdiv_32ns_32ns_32_8_1&apos; to &apos;neural_net_fdiv_3lbW&apos; due to the length limit 20" tag=""/>
 	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;neural_net_sitofp_32ns_32_3_1&apos; to &apos;neural_net_sitofpmb6&apos; due to the length limit 20" tag=""/>
 	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;neural_net_fptrunc_64ns_32_1_1&apos; to &apos;neural_net_fptrunncg&apos; due to the length limit 20" tag=""/>
 	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;neural_net_fpext_32ns_64_1_1&apos; to &apos;neural_net_fpext_ocq&apos; due to the length limit 20" tag=""/>
 	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;neural_net_dexp_64ns_64ns_64_11_full_dsp_1&apos; to &apos;neural_net_dexp_6pcA&apos; due to the length limit 20" tag=""/>
+	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;neural_net_mac_muladd_9ns_11ns_10ns_19_1_1&apos; to &apos;neural_net_mac_muqcK&apos; due to the length limit 20" tag=""/>
+	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;neural_net_mac_muladd_4ns_10ns_9ns_13_1_1&apos; to &apos;neural_net_mac_murcU&apos; due to the length limit 20" tag=""/>
 	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;neural_net_dexp_6pcA&apos;: 1 instance(s)." tag=""/>
 	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;neural_net_faddfskbM&apos;: 1 instance(s)." tag=""/>
 	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;neural_net_fcmp_3fYi&apos;: 1 instance(s)." tag=""/>
@@ -270,9 +219,11 @@ using namespace std;
 	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;neural_net_fmul_3dEe&apos;: 1 instance(s)." tag=""/>
 	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;neural_net_fpext_ocq&apos;: 1 instance(s)." tag=""/>
 	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;neural_net_fptrunncg&apos;: 1 instance(s)." tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;neural_net_mac_muqcK&apos;: 1 instance(s)." tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;neural_net_mac_murcU&apos;: 1 instance(s)." tag=""/>
 	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;neural_net_sitofpmb6&apos;: 1 instance(s)." tag=""/>
 	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="369" content="Finished creating RTL model for &apos;neural_net&apos;." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 1.926 seconds; current allocated memory: 189.852 MB." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 2.211 seconds; current allocated memory: 189.917 MB." tag=""/>
 	<Message prefix="[RTMG 210-279]" severity="INFO" keynum="RTMG_279_1793" content="Implementing memory &apos;conv3d1_conv_filtbkb_rom&apos; using auto ROMs." tag=""/>
 	<Message prefix="[RTMG 210-279]" severity="INFO" keynum="RTMG_279_1793" content="Implementing memory &apos;Convolution_conv_eOg_rom&apos; using distributed ROMs." tag=""/>
 	<Message prefix="[RTMG 210-279]" severity="INFO" keynum="RTMG_279_1793" content="Implementing memory &apos;conv3d2_conv_filtg8j_rom&apos; using auto ROMs." tag=""/>
@@ -281,17 +232,17 @@ using namespace std;
 	<Message prefix="[RTMG 210-278]" severity="INFO" keynum="RTMG_278_1792" content="Implementing memory &apos;neural_net_layer2_ram (RAM)&apos; using block RAMs with power-on initialization." tag=""/>
 	<Message prefix="[RTMG 210-278]" severity="INFO" keynum="RTMG_278_1792" content="Implementing memory &apos;neural_net_layer3_ram (RAM)&apos; using block RAMs with power-on initialization." tag=""/>
 	<Message prefix="[RTMG 210-278]" severity="INFO" keynum="RTMG_278_1792" content="Implementing memory &apos;neural_net_layer4_ram (RAM)&apos; using block RAMs with power-on initialization." tag=""/>
-	<Message prefix="[RTMG 210-279]" severity="INFO" keynum="RTMG_279_1793" content="Implementing memory &apos;neural_net_ip_weiibs_rom&apos; using auto ROMs." tag=""/>
 	<Message prefix="[RTMG 210-279]" severity="INFO" keynum="RTMG_279_1793" content="Implementing memory &apos;neural_net_ip_bias_rom&apos; using auto ROMs." tag=""/>
 	<Message prefix="[RTMG 210-278]" severity="INFO" keynum="RTMG_278_1792" content="Implementing memory &apos;neural_net_layer5_ram (RAM)&apos; using block RAMs with power-on initialization." tag=""/>
-	<Message prefix="[RTMG 210-279]" severity="INFO" keynum="RTMG_279_1793" content="Implementing memory &apos;neural_net_ip_weijbC_rom&apos; using auto ROMs." tag=""/>
+	<Message prefix="[RTMG 210-279]" severity="INFO" keynum="RTMG_279_1793" content="Implementing memory &apos;neural_net_ip_weiibs_rom&apos; using auto ROMs." tag=""/>
 	<Message prefix="[RTMG 210-279]" severity="INFO" keynum="RTMG_279_1793" content="Implementing memory &apos;neural_net_ip_bias2_rom&apos; using distributed ROMs." tag=""/>
 	<Message prefix="[RTMG 210-278]" severity="INFO" keynum="RTMG_278_1792" content="Implementing memory &apos;neural_net_layer7_ram (RAM)&apos; using distributed RAMs with power-on initialization." tag=""/>
+	<Message prefix="[RTMG 210-279]" severity="INFO" keynum="RTMG_279_1793" content="Implementing memory &apos;neural_net_ip_weijbC_rom&apos; using auto ROMs." tag=""/>
 	<Message prefix="[RTMG 210-278]" severity="INFO" keynum="RTMG_278_1790" content="Implementing memory &apos;neural_net_layer0_ram (RAM)&apos; using block RAMs." tag=""/>
 	<Message prefix="[RTMG 210-278]" severity="INFO" keynum="RTMG_278_1790" content="Implementing memory &apos;neural_net_layer8_ram (RAM)&apos; using distributed RAMs." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished generating all RTL models Time (s): cpu = 00:26:09 ; elapsed = 00:27:57 . Memory (MB): peak = 492.668 ; gain = 435.340" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished generating all RTL models Time (s): cpu = 00:01:22 ; elapsed = 00:03:18 . Memory (MB): peak = 493.582 ; gain = 435.965" tag=""/>
 	<Message prefix="[SYSC 207-301]" severity="INFO" keynum="SYSC_301_1065" content="Generating SystemC RTL for neural_net." tag=""/>
 	<Message prefix="[VHDL 208-304]" severity="INFO" keynum="VHDL_304_1066" content="Generating VHDL RTL for neural_net." tag=""/>
 	<Message prefix="[VLOG 209-307]" severity="INFO" keynum="VLOG_307_1067" content="Generating Verilog RTL for neural_net." tag=""/>
-	<Message prefix="[HLS 200-112]" severity="INFO" keynum="472" content="Total elapsed time: 1676.71 seconds; peak allocated memory: 189.852 MB." tag=""/>
+	<Message prefix="[HLS 200-112]" severity="INFO" keynum="472" content="Total elapsed time: 198.364 seconds; peak allocated memory: 189.917 MB." tag=""/>
 </Messages>

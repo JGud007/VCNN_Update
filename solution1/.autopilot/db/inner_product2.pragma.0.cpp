@@ -179,7 +179,7 @@ typedef struct {
     int input_channel_num;
     int input_feature_map_height;
     int input_feature_map_width;
-#49 "VCNN_Update/src/lib/layers/../../custom/caffe_model_layer.h"
+
 } Layer;
 
 static int const nChannels = 1;
@@ -192,11 +192,7 @@ extern float mean_image[1][28][28];
 
 
 extern Layer layers[10];
-#4 "VCNN_Update/src/lib/layers/layers.h" 2
-
-
-using namespace std;
-
+#5 "VCNN_Update/src/lib/layers/layers.h" 2
 
 void Convolution(Layer current, Layer next, float *layer0, float *layer1);
 void Convolution2(Layer current, Layer next, float *layer0, float *layer1);
@@ -211,22 +207,20 @@ float ip_weight2[10*500] = {0.050003, -0.084826, 0.048367, 0.023527, 0.068825, -
 float ip_bias2[10] = {-0.003636, 0.015623, -0.01442, -0.016374, -0.011747, -0.005545, -0.042688, -0.015682, 0.08586, 0.008604};
 
 void InnerProduct2(Layer current, Layer next, float *layer0, float *layer1){
+#pragma HLS unroll
  int channels = current.input_channel_num;
  int height = current.input_feature_map_height;
  int width = current.input_feature_map_width;
-
-
-
  int total_input = channels*height*width;
  int total_output = current.ip_output_num;
+
  for(int i=0; i<total_output; i++)
  {
   float r = 0.0;
-  for(int j=0; j<total_input; j++)
-
-   r+=((*(layer0+j)) * (ip_weight2[i*total_input + j]));
-
-
+  for(int j=0; j<total_input; j++){
+#pragma HLS loop_flatten
+ r+=((*(layer0+j)) * (ip_weight2[i*total_input + j]));
+  }
   *(layer1+i) = r + ip_bias2[i];
  }
 }

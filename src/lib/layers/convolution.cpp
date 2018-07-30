@@ -7,7 +7,7 @@ float conv_filter_weight[20*1*5*5] = {0.075086, 0.21285, 0.294989, -0.093877, 0.
 float conv_bias[20] = {-0.080922, -0.054016, 0.010864, -0.078121, -0.011839, 0.072157, -0.137894, -0.161596, -0.032325, -0.01468, -0.258716, -0.154862, 0.140349, -0.3088, -0.065761, 0.025168, -0.126911, 0.24899, -0.044372, 0.133308}; //conv_bias
 
 inline float conv3d1(Layer current, int fn, int ksize, int channels, int h, int w, float *layer0){
-	#pragma HLS loop_merge
+	#pragma HLS unroll
 
 	float r = 0;
 	int offset = int(ksize/2);
