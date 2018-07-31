@@ -345,6 +345,7 @@ extern Layer layers[10];
 void Convolution(Layer current, Layer next, float *layer0, float *layer1);
 void Convolution2(Layer current, Layer next, float *layer0, float *layer1);
 void PoolingMax(Layer current, Layer next, float *layer0, float *layer1);
+void PoolingMax2(Layer current, Layer next, float *layer0, float *layer1);
 void Relu(Layer current, Layer next, float *layer0, float *layer1);
 void InnerProduct(Layer current, Layer next, float *layer0, float *layer1);
 void InnerProduct2(Layer current, Layer next, float *layer0, float *layer1);
@@ -859,7 +860,7 @@ extern "C" {
 # 511 "C:/Xilinx/Vivado/2018.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 2 3
 # 3 "VCNN_Update/src/lib/../custom/custom.h" 2
 
-void neural_net(float mean_image[nChannels][imgHeight][imgWidth], int input_image[nChannels][imgHeight][imgWidth], float result[nOutput]);
+void neural_net(float mean_image[nChannels][imgHeight][imgWidth], int input_image[nChannels][imgHeight][imgWidth], int* result);
 # 6 "VCNN_Update/src/lib/util.h" 2
 
 float* GET_INPUT_DATA(Layer l, int i, int j, int k, float *layerAddress);
@@ -868,10 +869,10 @@ float* GET_INPUT_DATA(Layer l, int i, int j, int k, float *layerAddress);
 
 
 
-void neural_net(float mean_image[nChannels][imgHeight][imgWidth], int input_image[nChannels][imgHeight][imgWidth], float result[nOutput]);
+void neural_net(float mean_image[nChannels][imgHeight][imgWidth], int input_image[nChannels][imgHeight][imgWidth], int* result);
 # 5 "VCNN_Update/src/lib/main.cpp" 2
 
-void neural_net(float mean_image[nChannels][imgHeight][imgWidth], int input_image[nChannels][imgHeight][imgWidth], float result[nOutput]){_ssdm_SpecArrayDimSize(result,nOutput);_ssdm_SpecArrayDimSize(input_image,nChannels);_ssdm_SpecArrayDimSize(mean_image,nChannels);
+void neural_net(float mean_image[nChannels][imgHeight][imgWidth], int input_image[nChannels][imgHeight][imgWidth], int* result){_ssdm_SpecArrayDimSize(input_image,nChannels);_ssdm_SpecArrayDimSize(mean_image,nChannels);
 #pragma HLS_DATAFLOW
  float layer0[784] = {0};
     float layer1[11520] = {0};
@@ -885,25 +886,33 @@ void neural_net(float mean_image[nChannels][imgHeight][imgWidth], int input_imag
     float layer9[10] = {0};
 
 
- for(int i = 0; i<nChannels; i++)
-  for(int j = 0; j<imgHeight; j++)
+ for(int i = 0; i<nChannels; i++){
+  for(int j = 0; j<imgHeight; j++){
    for(int k = 0; k<imgWidth; k++){
     float temp = (input_image[i][j][k] - mean_image[i][j][k]) * dataScale;
     *GET_INPUT_DATA(layers[0], i,j,k,&layer0[0]) = temp;
    }
+  }
+ }
 
  Convolution(layers[0], layers[1], &layer0[0], &layer1[0]);
  PoolingMax(layers[1], layers[2], &layer1[0], &layer2[0]);
  Convolution2(layers[2], layers[3], &layer2[0], &layer3[0]);
- PoolingMax(layers[3], layers[4], &layer3[0], &layer4[0]);
+ PoolingMax2(layers[3], layers[4], &layer3[0], &layer4[0]);
  InnerProduct(layers[4], layers[5], &layer4[0], &layer5[0]);
  Relu(layers[5], layers[6], &layer5[0], &layer6[0]);
  InnerProduct2(layers[6], layers[7], &layer6[0], &layer7[0]);
  Softmax(layers[7], layers[8], &layer7[0], &layer8[0]);
 
+ float max_val = -10000;
+ int max_idx = -1;
  for(int i = 0;i<nOutput;i++){
-  result[i] = *(&layer8[0]+i);
+  if (*(&layer8[0]+i) > max_val) {
+   max_idx = i;
+   max_val = *(&layer8[0]+i);
+  }
  }
+ *result = max_idx;
 
 }
 

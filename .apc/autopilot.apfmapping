@@ -17,7 +17,7 @@
     <originFiles name="Softmax.cpp" path="C:\VCNN_Update\src\lib\layers\Softmax.cpp"/>
   </source>
   <testbench>
-    <originFiles name="mnist_data.h" path="C:\VCNN_Update\src\custom\mnist\mnist_data.h"/>
     <originFiles name="test.cpp" path="C:\VCNN_Update\src\custom\test.cpp"/>
+    <originFiles name="mnist_data.h" path="C:\VCNN_Update\src\custom\mnist\mnist_data.h"/>
   </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>

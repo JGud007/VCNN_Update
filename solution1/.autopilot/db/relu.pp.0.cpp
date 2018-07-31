@@ -197,6 +197,7 @@ extern Layer layers[10];
 void Convolution(Layer current, Layer next, float *layer0, float *layer1);
 void Convolution2(Layer current, Layer next, float *layer0, float *layer1);
 void PoolingMax(Layer current, Layer next, float *layer0, float *layer1);
+void PoolingMax2(Layer current, Layer next, float *layer0, float *layer1);
 void Relu(Layer current, Layer next, float *layer0, float *layer1);
 void InnerProduct(Layer current, Layer next, float *layer0, float *layer1);
 void InnerProduct2(Layer current, Layer next, float *layer0, float *layer1);
@@ -709,7 +710,7 @@ extern "C" {
 # 511 "C:/Xilinx/Vivado/2018.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 2 3
 # 3 "VCNN_Update/src/lib/layers/../../custom/custom.h" 2
 
-void neural_net(float mean_image[nChannels][imgHeight][imgWidth], int input_image[nChannels][imgHeight][imgWidth], float result[nOutput]);
+void neural_net(float mean_image[nChannels][imgHeight][imgWidth], int input_image[nChannels][imgHeight][imgWidth], int* result);
 # 6 "VCNN_Update/src/lib/layers/../util.h" 2
 
 float* GET_INPUT_DATA(Layer l, int i, int j, int k, float *layerAddress);
@@ -721,15 +722,14 @@ float* GET_INPUT_DATA(Layer l, int i, int j, int k, float *layerAddress);
 
 
 void Relu(Layer current, Layer next, float *layer0, float *layer1){
-#pragma HLS unroll
- int inputs = current.input_channel_num;
- int height = current.input_feature_map_height;
- int width = current.input_feature_map_width;
+#pragma HLS DATAFLOW
+
  int i,h,w;
 
- for(i=0;i<inputs;i++){
-  for(h=0; h<height;h++){
-   for(w=0;w<width;w++){
+ for(i=0;i<500;i++){
+#pragma HLS unroll
+ for(h=0; h<1;h++){
+   for(w=0;w<1;w++){
 #pragma HLS loop_flatten
  float data = *(GET_INPUT_DATA(current,i,h,w,layer0));
     if(data < 0){

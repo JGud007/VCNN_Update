@@ -7,43 +7,44 @@ float conv_filter_weight[20*1*5*5] = {0.075086, 0.21285, 0.294989, -0.093877, 0.
 float conv_bias[20] = {-0.080922, -0.054016, 0.010864, -0.078121, -0.011839, 0.072157, -0.137894, -0.161596, -0.032325, -0.01468, -0.258716, -0.154862, 0.140349, -0.3088, -0.065761, 0.025168, -0.126911, 0.24899, -0.044372, 0.133308}; //conv_bias
 
 inline float conv3d1(Layer current, int fn, int ksize, int channels, int h, int w, float *layer0){
-	#pragma HLS unroll
-
 	float r = 0;
 	int offset = int(ksize/2);
 	int karea = ksize*ksize;
-	for (int c = 0; c<channels; c++)
-		for (int i = -offset; i < offset+1; i++)
-			for (int j = -offset; j<offset+1; j++)
-			{
+	for (int c = 0; c<channels; c++){
+		for (int i = -offset; i < offset+1; i++){
+			for (int j = -offset; j<offset+1; j++)			{
 				#pragma HLS loop_flatten
 				float kernel_v = conv_filter_weight[c*(karea) + (offset+i)*ksize + (offset+j) + fn];
 				float image_v = *(GET_INPUT_DATA(current, c, h+i, w+j, layer0));
 
 				r+= kernel_v * image_v;
 			}
+		}
+	}
 	return r;
 }
 
 void Convolution(Layer current, Layer next, float *layer0, float *layer1){
-	#pragma HLS loop_merge
+	#pragma HLS DATAFLOW
 
-	int ksize = current.conv_filter_size;
-	int fnum = current.conv_filter_num;
-	int stride = current.conv_stride;
-	int pad = current.conv_pad;
-	int channels = current.input_channel_num;
+	int ksize = 5;
+	int fnum = 20;
+	int stride = 1;
+	int pad = 0;
+	int channels = 1;
 	int offset_idx = int(ksize/2) - pad;
-	int height = current.input_feature_map_height-offset_idx;
-	int width = current.input_feature_map_width-offset_idx;
+	int height = 28-offset_idx;
+	int width = 28-offset_idx;
 	int filterSize = ksize*ksize*channels;
 
 	for (int fn = 0; fn < fnum; fn++){
-		for(int h = offset_idx, hc = 0; h < height; h+=stride, hc++)
+		#pragma HLS unroll
+		for(int h = offset_idx, hc = 0; h < height; h+=stride, hc++){
 			for(int w = offset_idx, wc = 0; w < width; w+=stride, wc++){
 				#pragma HLS loop_flatten
 				float temp = conv3d1(current, fn*filterSize, ksize, channels, h, w, layer0); //need change here
 				*(GET_INPUT_DATA(next,fn,hc,wc,layer1)) = temp+conv_bias[fn];
 			}
+		}
 	}
 }

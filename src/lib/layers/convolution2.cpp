@@ -6,20 +6,20 @@ float conv_filter_weight2[50*20*5*5] = {-0.028535, 0.062671, -0.003312, -0.01418
 float conv_bias2[50] ={-0.015072, -0.039145, -0.112414, -0.084798, -0.017394, -0.113426, -0.06528, -0.060968, -0.077052, -0.108664, -0.053238, -0.040981, -0.044017, -0.024803, -0.020173, -0.073677, -0.026989, -0.048041, -0.030002, -0.084869, -0.046448, -0.032969, 0.000103, -0.097249, -0.035176, -0.090252, -0.046004, -0.131881, -0.003963, 0.006545, -0.025513, 0.031905, -0.050373, 0.020599, -0.090005, 0.028709, -0.000821, -0.050937, -0.056812, -0.084208, -0.027781, -0.012758, -0.057796, -0.065536, -0.012076, -0.033948, -0.034509, -0.065762, -0.002225, -0.102006}; //conv_bias
 
 inline float conv3d2(Layer current, int fn, int ksize, int channels, int h, int w, float *layer0){
-	#pragma HLS unroll
-
 	float r = 0;
 	int offset = int(ksize/2);
 	int karea = ksize*ksize;
-	for (int c = 0; c<channels; c++)
-		for (int i = -offset; i < offset+1; i++)
-			for (int j = -offset; j<offset+1; j++)
-			{
+
+	for (int c = 0; c<channels; c++){
+		for (int i = -offset; i < offset+1; i++){
+			for (int j = -offset; j<offset+1; j++){
 				#pragma HLS loop_flatten
 				float kernel_v = conv_filter_weight2[c*(karea) + (offset+i)*ksize + (offset+j)+ fn];
 				float image_v = *(GET_INPUT_DATA(current, c, h+i, w+j, layer0));
 				r+= kernel_v * image_v;
 			}
+		}
+	}
 
 	return r;
 }
@@ -27,24 +27,26 @@ inline float conv3d2(Layer current, int fn, int ksize, int channels, int h, int 
 
 
 void Convolution2(Layer current, Layer next, float *layer0, float *layer1){
-	#pragma HLS loop_merge
+	#pragma HLS DATAFLOW
 
-	int ksize = current.conv_filter_size;
-	int fnum = current.conv_filter_num;
-	int stride = current.conv_stride;
-	int pad = current.conv_pad;
-	int channels = current.input_channel_num;
+	int ksize = 5;
+	int fnum = 50;
+	int stride = 1;
+	int pad = 0;
+	int channels = 20;
 	int offset_idx = int(ksize/2) - pad;
-	int height = current.input_feature_map_height-offset_idx;
-	int width = current.input_feature_map_width-offset_idx;
+	int height = 12-offset_idx;
+	int width = 12-offset_idx;
 	int filterSize = ksize*ksize*channels;
 
 	for (int fn = 0; fn < fnum; fn++){
-			for(int h = offset_idx, hc = 0; h < height; h+=stride, hc++)
-				for(int w = offset_idx, wc = 0; w < width; w+=stride, wc++){
-					#pragma HLS loop_flatten
-					float temp = conv3d2(current, fn*filterSize, ksize, channels, h, w, layer0); //need change here
-					*(GET_INPUT_DATA(next,fn,hc,wc,layer1)) = temp+conv_bias2[fn];
-				}
+	#pragma HLS unroll
+		for(int h = offset_idx, hc = 0; h < height; h+=stride, hc++){
+			for(int w = offset_idx, wc = 0; w < width; w+=stride, wc++){
+				#pragma HLS loop_flatten
+				float temp = conv3d2(current, fn*filterSize, ksize, channels, h, w, layer0); //need change here
+				*(GET_INPUT_DATA(next,fn,hc,wc,layer1)) = temp+conv_bias2[fn];
+			}
+		}
 	}
 }

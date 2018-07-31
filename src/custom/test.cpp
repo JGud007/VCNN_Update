@@ -18,26 +18,14 @@ void print_mnist(int images[nChannels][imgHeight][imgWidth]){
 
 
 int main(){
-	 float result[nOutput];
+	 int result;
 	 int (*images)[28][28]  = mnist_images;
 	 int* labels = mnist_labels;
 	 int corrected_number = 0;
-	 //MNIST_TEST_NUM
 	 for(int i = 0; i<MNIST_TEST_NUM; i++,images++){
-		/*
-		 * image, label
-		 */
-//		print_mnist(images);
-		neural_net(mean_image, images, result);
-		float max_val = -10000;
-		int max_idx = -1;
-		for (int c=0; c < nOutput; c++)
-			if (result[c] > max_val){
-				max_val = result[c];
-				max_idx = c;
-			}
-		printf("the corrected label = %d; the detected label = %d;\n", labels[i], max_idx);
-		if(labels[i] == max_idx){
+		neural_net(mean_image, images, &result);
+		printf("the corrected label = %d; the detected label = %d;\n", labels[i], result);
+		if(labels[i] == result){
 			corrected_number++;
 		}
 	 }

@@ -197,6 +197,7 @@ extern Layer layers[10];
 void Convolution(Layer current, Layer next, float *layer0, float *layer1);
 void Convolution2(Layer current, Layer next, float *layer0, float *layer1);
 void PoolingMax(Layer current, Layer next, float *layer0, float *layer1);
+void PoolingMax2(Layer current, Layer next, float *layer0, float *layer1);
 void Relu(Layer current, Layer next, float *layer0, float *layer1);
 void InnerProduct(Layer current, Layer next, float *layer0, float *layer1);
 void InnerProduct2(Layer current, Layer next, float *layer0, float *layer1);
@@ -709,7 +710,7 @@ extern "C" {
 #511 "C:/Xilinx/Vivado/2018.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 2 3
 #3 "VCNN_Update/src/lib/layers/../../custom/custom.h" 2
 
-void neural_net(float mean_image[nChannels][imgHeight][imgWidth], int input_image[nChannels][imgHeight][imgWidth], float result[nOutput]);
+void neural_net(float mean_image[nChannels][imgHeight][imgWidth], int input_image[nChannels][imgHeight][imgWidth], int* result);
 #6 "VCNN_Update/src/lib/layers/../util.h" 2
 
 float* GET_INPUT_DATA(Layer l, int i, int j, int k, float *layerAddress);
@@ -718,35 +719,59 @@ float* GET_INPUT_DATA(Layer l, int i, int j, int k, float *layerAddress);
 
 
 
-void neural_net(float mean_image[nChannels][imgHeight][imgWidth], int input_image[nChannels][imgHeight][imgWidth], float result[nOutput]);
+void neural_net(float mean_image[nChannels][imgHeight][imgWidth], int input_image[nChannels][imgHeight][imgWidth], int* result);
 #4 "VCNN_Update/src/lib/layers/pooling.cpp" 2
 
-inline float max(Layer current, int ksize, int channel, int h, int w, float *layer0){
-_ssdm_Unroll(0,0,0, "");
+inline float max(Layer current, int channel, int h, int w, float *layer0){
  float r = -(1e99);
- int karea = ksize*ksize;
- for (int i = 0; i < ksize; i++)
-  for (int j = 0; j < ksize; j++)
-  {
-   float tmp = *(GET_INPUT_DATA(current, channel, h+i, w+j, layer0));
+ for (int i = 0; i < 2; i++){
+_ssdm_Unroll(0,0,0, "");
+ for (int j = 0; j < 2; j++){
+_ssdm_SpecLoopFlatten(0, "");
+ float tmp = *(GET_INPUT_DATA(current, channel, h+i, w+j, layer0));
    r = r > tmp ? r : tmp;
   }
+ }
  return r;
 }
 
 void PoolingMax(Layer current, Layer next, float* layer0, float* layer1){
-_ssdm_Unroll(0,0,0, "");
- int ksize = current.pl_kernel_size;
- int stride = current.pl_stride;
- int channels = current.input_channel_num;
- int height = current.input_feature_map_height-stride+1;
- int width = current.input_feature_map_width-stride+1;
+_ssdm_op_SpecDataflowPipeline(-1, "");
+
+ int ksize = 2;
+ int stride = 2;
+ int channels = 20;
+ int height = 24-stride+1;
+ int width = 24-stride+1;
  float output[2880] = {0};
 
  for (int c = 0; c < channels; c++){
-  for(int h = 0, hc = 0; h < height; h+=stride, hc++){
+_ssdm_Unroll(0,0,0, "");
+ for(int h = 0, hc = 0; h < height; h+=stride, hc++){
    for(int w = 0, wc = 0; w < width; w+=stride, wc++){
-    *(GET_INPUT_DATA(next,c,hc,wc,layer1)) = max(current, ksize, c, h, w, layer0);
+_ssdm_SpecLoopFlatten(0, "");
+ *(GET_INPUT_DATA(next,c,hc,wc,layer1)) = max(current, c, h, w, layer0);
+   }
+  }
+ }
+}
+
+void PoolingMax2(Layer current, Layer next, float* layer0, float* layer1){
+_ssdm_op_SpecDataflowPipeline(-1, "");
+
+ int ksize = 2;
+ int stride = 2;
+ int channels = 50;
+ int height = 8-stride+1;
+ int width = 8-stride+1;
+ float output[2880] = {0};
+
+ for (int c = 0; c < channels; c++){
+_ssdm_Unroll(0,0,0, "");
+ for(int h = 0, hc = 0; h < height; h+=stride, hc++){
+   for(int w = 0, wc = 0; w < width; w+=stride, wc++){
+_ssdm_SpecLoopFlatten(0, "");
+ *(GET_INPUT_DATA(next,c,hc,wc,layer1)) = max(current, c, h, w, layer0);
    }
   }
  }
