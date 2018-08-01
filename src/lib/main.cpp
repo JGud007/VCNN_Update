@@ -4,7 +4,13 @@
 #include "../custom/custom.h"
 
 void neural_net(MEAN_IMAGE_TYPE mean_image[nChannels][imgHeight][imgWidth], INPUT_IMAGE_TYPE input_image[nChannels][imgHeight][imgWidth], int* result){
+
+#pragma HLS INTERFACE s_axilite port=return bundle=HLS_MACC_PERIPH_BUS
+#pragma HLS INTERFACE s_axilite port=mean_image bundle=HLS_MACC_PERIPH_BUS
+#pragma HLS INTERFACE s_axilite port=input_image bundle=HLS_MACC_PERIPH_BUS
+#pragma HLS INTERFACE s_axilite port=result bundle=HLS_MACC_PERIPH_BUS
 #pragma HLS_DATAFLOW
+
 	float layer0[784] = {0};
     float layer1[11520] = {0};
     float layer2[2880] = {0};
@@ -14,8 +20,16 @@ void neural_net(MEAN_IMAGE_TYPE mean_image[nChannels][imgHeight][imgWidth], INPU
     float layer6[500] = {0};
     float layer7[10] = {0};
     float layer8[10] = {0};
-    float layer9[10] = {0};
 
+	#pragma HLS ARRAY_MAP variable=layer0 instance=layers horizontal
+	#pragma HLS ARRAY_MAP variable=layer1 instance=layers horizontal
+	#pragma HLS ARRAY_MAP variable=layer2 instance=layers horizontal
+	#pragma HLS ARRAY_MAP variable=layer3 instance=layers horizontal
+	#pragma HLS ARRAY_MAP variable=layer4 instance=layers horizontal
+	#pragma HLS ARRAY_MAP variable=layer5 instance=layers horizontal
+	#pragma HLS ARRAY_MAP variable=layer6 instance=layers horizontal
+	#pragma HLS ARRAY_MAP variable=layer7 instance=layers horizontal
+	#pragma HLS ARRAY_MAP variable=layer8 instance=layers horizontal
 
 	for(int i = 0; i<nChannels; i++){
 		for(int j = 0; j<imgHeight; j++){

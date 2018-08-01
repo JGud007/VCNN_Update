@@ -724,7 +724,13 @@ void neural_net(float mean_image[nChannels][imgHeight][imgWidth], int input_imag
 #5 "VCNN_Update/src/lib/main.cpp" 2
 
 void neural_net(float mean_image[nChannels][imgHeight][imgWidth], int input_image[nChannels][imgHeight][imgWidth], int* result){_ssdm_SpecArrayDimSize(input_image,nChannels);_ssdm_SpecArrayDimSize(mean_image,nChannels);
+
+_ssdm_op_SpecInterface(0, "s_axilite", 0, 0, "", 0, 0, "HLS_MACC_PERIPH_BUS", "", "", 0, 0, 0, 0, "", "");
+_ssdm_op_SpecInterface(mean_image, "s_axilite", 0, 0, "", 0, 0, "HLS_MACC_PERIPH_BUS", "", "", 0, 0, 0, 0, "", "");
+_ssdm_op_SpecInterface(input_image, "s_axilite", 0, 0, "", 0, 0, "HLS_MACC_PERIPH_BUS", "", "", 0, 0, 0, 0, "", "");
+_ssdm_op_SpecInterface(result, "s_axilite", 0, 0, "", 0, 0, "HLS_MACC_PERIPH_BUS", "", "", 0, 0, 0, 0, "", "");
 #pragma HLS_DATAFLOW
+
  float layer0[784] = {0};
     float layer1[11520] = {0};
     float layer2[2880] = {0};
@@ -734,8 +740,16 @@ void neural_net(float mean_image[nChannels][imgHeight][imgWidth], int input_imag
     float layer6[500] = {0};
     float layer7[10] = {0};
     float layer8[10] = {0};
-    float layer9[10] = {0};
 
+_ssdm_SpecArrayMap( layer0, "layers", -1, "HORIZONTAL", "");
+_ssdm_SpecArrayMap( layer1, "layers", -1, "HORIZONTAL", "");
+_ssdm_SpecArrayMap( layer2, "layers", -1, "HORIZONTAL", "");
+_ssdm_SpecArrayMap( layer3, "layers", -1, "HORIZONTAL", "");
+_ssdm_SpecArrayMap( layer4, "layers", -1, "HORIZONTAL", "");
+_ssdm_SpecArrayMap( layer5, "layers", -1, "HORIZONTAL", "");
+_ssdm_SpecArrayMap( layer6, "layers", -1, "HORIZONTAL", "");
+_ssdm_SpecArrayMap( layer7, "layers", -1, "HORIZONTAL", "");
+_ssdm_SpecArrayMap( layer8, "layers", -1, "HORIZONTAL", "");
 
  for(int i = 0; i<nChannels; i++){
   for(int j = 0; j<imgHeight; j++){
